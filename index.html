@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris Roubaix Tur 2027 🇫🇷</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff5e6;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23ff9900" opacity="0.3"/><circle cx="80" cy="40" r="3" fill="%230099ff" opacity="0.3"/><circle cx="40" cy="80" r="2.5" fill="%23ff3366" opacity="0.3"/></svg>');
+        }
+        h1 {
+            color: #ff6600;
+            text-align: center;
+            border-bottom: 3px dashed #ff6600;
+            padding-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .header-info {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            color: #333;
+        }
+        .day {
+            background: linear-gradient(135deg, #fff, #e6f7ff);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            cursor: pointer;
+            border: 2px solid #ff9900;
+            transition: transform 0.2s;
+        }
+        .day:hover {
+            transform: scale(1.02);
+        }
+        .day-header {
+            padding: 15px;
+            background: linear-gradient(135deg, #ff6600, #ff3366);
+            color: white;
+            border-radius: 15px 15px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        .day-header h2 {
+            margin: 0;
+            font-size: 1.4em;
+        }
+        .day-content {
+            padding: 15px;
+            display: none;
+        }
+        .day-content.show {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .toggle-icon {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        ul {
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #ff3366;
+            font-style: italic;
+        }
+        .emoji {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Paris Roubaix Tur 🇫🇷🚴‍♂️🍺</h1>
+
+    <div class="header-info">
+        <p><strong>Rejsedatoer:</strong> 9.–13. april 2027 <span class="emoji">🗓️</span></p>
+        <p><strong>Transport:</strong> Fly med SAS til Bruxelles. Cirka 2.300 kr. <span class="emoji">✈️</span></p>
+        <p><strong>Base:</strong> Hoteller i Bruxelles og den belgiske by Kortrijk (f.eks. <span class="highlight">Park Hotel Kortrijk</span> i centrum). <span class="emoji">🏨</span></p>
+    </div>
+
+    <h2>📍 Rejseprogram</h2>
+
+    <div class="day" onclick="toggleDay('fredag')">
+        <div class="day-header">
+            <h2>📅 Fredag 9. april: Ankomst</h2>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div class="day-content" id="fredag">
+            <ul>
+                <li>Fly fra CPH-BRU <span class="emoji">✈️</span></li>
+                <li>Transfer til Ghent <span class="emoji">🚖</span></li>
+                <li>Hotel check-in <span class="emoji">🏨</span></li>
+                <li>Hygge <span class="emoji">🍺</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="day" onclick="toggleDay('loerdag')">
+        <div class="day-header">
+            <h2>📅 Lørdag 10. april: Ghent</h2>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div class="day-content" id="loerdag">
+            <ul>
+                <li>Sightseeing og hygge <span class="emoji">🍻</span></li>
+                <li>Tidligt i seng <span class="emoji">☝️😴</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="day" onclick="toggleDay('soendag')">
+        <div class="day-header">
+            <h2>📅 Søndag 11. april: Paris-Roubaix</h2>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div class="day-content" id="soendag">
+            <ul>
+                <li>05:00 Taxa Ghent → Kortrijk (40 min.) <span class="emoji">🚖</span></li>
+                <li>06:00 “Go4Cycling” arrangement <span class="emoji">🚴‍♂️💨</span></li>
+                <li>18:00 Taxa Kortrijk → Ghent <span class="emoji">🚖</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="day" onclick="toggleDay('mandag')">
+        <div class="day-header">
+            <h2>📅 Mandag 12. april: Afslapning</h2>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div class="day-content" id="mandag">
+            <ul>
+                <li>Sightseeing, ideer? <span class="emoji">🏛️🎨</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="day" onclick="toggleDay('tirsdag')">
+        <div class="day-header">
+            <h2>📅 Tirsdag 13. april: Hjemrejse</h2>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div class="day-content" id="tirsdag">
+            <ul>
+                <li>Morgenmad <span class="emoji">🥐☕</span></li>
+                <li>Bruxelles-transfer <span class="emoji">🚆</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleDay(dayId) {
+            const content = document.getElementById(dayId);
+            const icon = content.previousElementSibling.querySelector('.toggle-icon');
+
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                icon.textContent = '+';
+            } else {
+                content.classList.add('show');
+                icon.textContent = '−';
+            }
+        }
+    </script>
+</body>
+</html>
