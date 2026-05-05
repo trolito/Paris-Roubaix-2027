@@ -202,15 +202,15 @@
     "title": "Monday, April 12 – Departure",
     "activities": [
       {
-        "time": "09:00",
+        "time": "08:30",
         "icon": "☕",
         "description": "Breakfast and hotel check-out",
-        "details": "Standard checkout is 12:00 noon, but confirm with the hotel. Luggage storage is usually available if you want to explore Kortrijk in the morning before heading to the airport.",
+        "details": "Standard checkout is 12:00 noon, but confirm with the hotel. Bag drop / luggage storage typically available if needed.",
         "link": null,
         "go4cycling": false
       },
       {
-        "time": "13:00",
+        "time": "10:00",
         "icon": "🚌",
         "description": "Transfer Kortrijk → Brussels Airport (~1.5 hours by coach/taxi)",
         "details": "Brussels Airport (BRU) is ~75 km from Kortrijk, typically 1h–1h20 by car depending on traffic. Book a taxi or private transfer the day before.",
@@ -218,7 +218,7 @@
         "go4cycling": false
       },
       {
-        "time": "14:30",
+        "time": "11:30",
         "icon": "🛫",
         "description": "Arrive Brussels Airport (BRU) · check in for departure",
         "details": "Check-in desks close 45 min before departure. Security is typically 20–30 min. SAS desks are in Terminal 1 (Schengen departures).",
@@ -226,10 +226,10 @@
         "go4cycling": false
       },
       {
-        "time": "15:10",
+        "time": "14:00",
         "icon": "✈️",
         "description": "Brussels (BRU) → Copenhagen (CPH) — Flight <span class=\"tbd-badge\">TBD</span>",
-        "details": "Flight to be confirmed. ~1h30 nonstop. Suggested departure window ~15:00–16:00 to arrive CPH by ~17:00. Verify at flysas.com or other carriers once the 2027 schedule is published.",
+        "details": "Flight to be confirmed. ~1h30 nonstop. Aiming for a departure window of ~14:00–16:00 to land CPH by ~16:00–18:00. Verify at flysas.com or other carriers once the 2027 schedule is published.",
         "link": null,
         "go4cycling": false
       }
