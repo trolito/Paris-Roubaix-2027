@@ -72,11 +72,11 @@
         "go4cycling": false
       },
       {
-        "time": "14:30",
+        "time": "14:00",
         "icon": "🍺",
-        "description": "Beer tasting at a local brewery",
-        "details": "Gruut Gentse Stadsbrouwerij brews unique herb-based beers and offers guided tastings in the city centre. Book in advance. Alternatively, Stadsbrouwerij De Struise is nearby.",
-        "link": "https://www.gruut.be",
+        "description": "Beer tasting in Ghent — pick a brewery",
+        "details": "Two options for an afternoon tasting:<br><br><strong>Gruut City Brewery</strong> — herb-based beers (no hops), guided tour + 3 tasters (~€10 pp, min. 2 people, book ahead).<br><br><strong>Visit Gent brewery guide</strong> — overview of Ghent's wider scene (Dok Brewing Company at Hal 16, Stropken, and more) — pick whichever fits the group.<br><br><a class=\"act-link\" href=\"https://www.gruut.be/en/visit-and-reservation/#brouwerijbezoek\" target=\"_blank\" rel=\"noopener\">Gruut ↗</a> &nbsp; <a class=\"act-link\" href=\"https://visit.gent.be/en/see-do/brewery#read-more\" target=\"_blank\" rel=\"noopener\">Visit Gent ↗</a>",
+        "link": null,
         "go4cycling": false
       },
       {
