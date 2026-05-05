@@ -1,4 +1,712 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">test
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris Roubaix Tur 2027 🇫🇷🚴‍♂️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e31e24;
+            --primary-dark: #a0151b;
+            --secondary: #ffd700;
+            --background: #f8f8f8;
+            --text: #2c2c2c;
+            --text-light: #666;
+            --card-bg: #ffffff;
+            --border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--background);
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(227, 30, 36, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 215, 0, 0.03) 0%, transparent 20%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100"><path d="M10 50 Q30 20 50 50 T90 50" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/><path d="M10 60 Q30 30 50 60 T90 60" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/><path d="M10 70 Q30 40 50 70 T90 70" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/></svg>');
+            opacity: 0.3;
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.5rem;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cycling-icon {
+            font-size: 2rem;
+            margin: 10px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-banner {
+            background: linear-gradient(135deg, #fff, #f0f0f0);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .info-item .icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .info-item strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .info-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+
+        .timeline-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .day-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .day-card::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 30px;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid var(--card-bg);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .day-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .day-header {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 16px 16px 0 0;
+            transition: background 0.3s ease;
+            background: linear-gradient(135deg, rgba(227,30,36,0.05), rgba(255,215,0,0.05));
+        }
+
+        .day-header:hover {
+            background: linear-gradient(135deg, rgba(227,30,36,0.1), rgba(255,215,0,0.1));
+        }
+
+        .day-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .day-date {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 4px;
+        }
+
+        .toggle-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(227,30,36,0.3);
+        }
+
+        .toggle-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+        }
+
+        .toggle-btn.rotate {
+            transform: rotate(45deg);
+        }
+
+        .day-content {
+            padding: 0 25px 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .day-content.show {
+            max-height: 2000px;
+            padding: 0 25px 25px;
+        }
+
+        .activity-list {
+            list-style: none;
+        }
+
+        .activity-item {
+            padding: 15px 0;
+            border-bottom: 1px dashed var(--border);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .activity-time {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.9rem;
+            min-width: 80px;
+        }
+
+        .activity-description {
+            flex: 1;
+            color: var(--text);
+        }
+
+        .activity-item.go4cycling {
+            background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,215,0,0.1));
+            border-left: 4px solid var(--secondary);
+            padding-left: 10px;
+            margin-left: -10px;
+        }
+        .activity-item.go4cycling .activity-icon {
+            color: var(--secondary);
+        }
+        .activity-item.go4cycling .activity-time {
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+        .activity-item.go4cycling .activity-description {
+            color: var(--primary);
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(255,215,0,0.3), rgba(227,30,36,0.1));
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-style: italic;
+        }
+
+        .map-container {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 40px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+        }
+
+        .map-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .map-placeholder {
+            background: linear-gradient(135deg, #e0e0e0, #f0f0f0);
+            height: 300px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-style: italic;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><path d="M50 250 Q100 200 150 250 Q200 200 250 250 Q300 200 350 250" stroke="%23e31e24" stroke-width="3" fill="none" opacity="0.3"/><circle cx="200" cy="150" r="5" fill="%23e31e24"/><text x="200" y="140" text-anchor="middle" fill="%23e31e24" font-size="12">Kortrijk</text><circle cx="100" cy="100" r="3" fill="%23ffd700"/><text x="100" y="90" text-anchor="middle" fill="%23ffd700" font-size="10">Brussels</text></svg>') center/cover;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-icon {
+            font-size: 1.5rem;
+            margin: 0 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            header {
+                padding: 30px 15px;
+            }
+            .logo {
+                font-size: 2.5rem;
+            }
+            .timeline::before {
+                left: 10px;
+            }
+            .day-card::before {
+                left: -21px;
+            }
+            .activity-time {
+                min-width: 60px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .loading {
+            animation: pulse 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">PARIS ROUBAIX TUR</div>
+        <div class="cycling-icon">🚴‍♂️</div>
+        <div class="subtitle">Cyklingsæsonens hårdeste klassiker</div>
+    </header>
+    <div class="container">
+        <div class="info-banner">
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="icon">📅</span>
+                    <div>
+                        <strong>Dato</strong>
+                        <p>10.-12. april 2027</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="icon">📍</span>
+                    <div>
+                        <strong>Sted</strong>
+                        <p>Kortrijk, Belgien</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="icon">🚴‍♂️</span>
+                    <div>
+                        <strong>Arrangør</strong>
+                        <p>Go4Cycling</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="icon">🏆</span>
+                    <div>
+                        <strong>Højdepunkt</strong>
+                        <p>Paris-Roubaix 2027</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="timeline">
+            <h2 class="timeline-title">REJSEPLAN</h2>
+
+            <div class="day-card">
+                <div class="day-header" onclick="toggleDay('fredag')">
+                    <div>
+                        <div class="day-title">FREDAG <span class="day-date">10. april</span></div>
+                        <div style="font-size: 0.85rem; color: var(--text-light); margin-top: 4px;">Ankomst</div>
+                    </div>
+                    <button class="toggle-btn" id="toggle-fredag">+</button>
+                </div>
+                <div class="day-content" id="fredag">
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">✈️</span>
+                            <span class="activity-time">Formiddag</span>
+                            <span class="activity-description">Fly fra København til Bruxelles</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🚖</span>
+                            <span class="activity-time">~1 time</span>
+                            <span class="activity-description">Transfer fra Bruxelles Lufthavn til Kortrijk</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🏨</span>
+                            <span class="activity-time">Eftermiddag</span>
+                            <span class="activity-description">Check-in på hotel i Kortrijk</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🍺</span>
+                            <span class="activity-time">Aften</span>
+                            <span class="activity-description">Byrundtur og hygge i Kortrijk</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header" onclick="toggleDay('loerdag')">
+                    <div>
+                        <div class="day-title">LØRDAG <span class="day-date">10. april</span></div>
+                        <div style="font-size: 0.85rem; color: var(--text-light); margin-top: 4px;">Kortrijk</div>
+                    </div>
+                    <button class="toggle-btn" id="toggle-loerdag">+</button>
+                </div>
+                <div class="day-content" id="loerdag">
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">🏛️</span>
+                            <span class="activity-time">Formiddag</span>
+                            <span class="activity-description">Sightseeing i Kortrijk</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🍽️</span>
+                            <span class="activity-time">Middag</span>
+                            <span class="activity-description">Frokost på lokal restaurant</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🍷</span>
+                            <span class="activity-time">Aften</span>
+                            <span class="activity-description">Aftensmad og forberedelse til løbsdagen</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">☝️😴</span>
+                            <span class="activity-time">Sen aften</span>
+                            <span class="activity-description">Tidligt i seng</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header" onclick="toggleDay('soendag')">
+                    <div>
+                        <div class="day-title">SØNDAG <span class="day-date">11. april</span></div>
+                        <div style="font-size: 0.85rem; color: var(--text-light); margin-top: 4px;">🏆 PARIS-ROUBAIX</div>
+                    </div>
+                    <button class="toggle-btn" id="toggle-soendag">+</button>
+                </div>
+                <div class="day-content" id="soendag">
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">⏰</span>
+                            <span class="activity-time">05:00</span>
+                            <span class="activity-description">Tidligt op og morgenmad</span>
+                        </li>
+                        <li class="activity-item go4cycling">
+                            <span class="activity-icon">🚍</span>
+                            <span class="activity-time">06:00</span>
+                            <span class="activity-description">Mødepunkt i Kortrijk - Go4Cycling VIP bus</span>
+                        </li>
+                        <li class="activity-item go4cycling">
+                            <span class="activity-icon">☕</span>
+                            <span class="activity-time">06:15-08:30</span>
+                            <span class="activity-description">Transfer Kortrijk → Compiègne (2t) med kaffe, te & wienerbrød</span>
+                        </li>
+                        <li class="activity-item go4cycling">
+                            <span class="activity-icon">🚩</span>
+                            <span class="activity-time">08:30-09:55</span>
+                            <span class="activity-description">Startzonen i Compiègne - oplev holdbusserne og forberedelserne</span>
+                        </li>
+                        <li class="activity-item go4cycling">
+                            <span class="activity-icon">👟</span>
+                            <span class="activity-time">09:55-10:05</span>
+                            <span class="activity-description">Retur til bussen</span>
+                        </li>
+                        <li class="activity-item go4cycling">
+                            <span class="activity-icon">🏁</span>
+                            <span class="activity-time">10:05</span>
+                            <span class="activity-description">Bussen kører - løbet starter kl. 10:15</span>
+                        </li>
+                        <li class="activity-item go4cycling">
+                            <span class="activity-icon">🚴‍♂️</span>
+                            <span class="activity-time">10:05-12:00</span>
+                            <span class="activity-description">Følg løbet fra nøglepositioner langs ruten</span>
+                        </li>
+                        <li class="activity-item go4cycling">
+                            <span class="activity-icon">🍽️</span>
+                            <span class="activity-time">12:00-12:30</span>
+                            <span class="activity-description">Frokostpause med madpakke & CAVA ombord</span>
+                        </li>
+                        <li class="activity-item go4cycling">
+                            <span class="activity-icon">🎬</span>
+                            <span class="activity-time">12:30-16:30</span>
+                            <span class="activity-description">Live oplevelser på flere strategiske punkter</span>
+                        </li>
+                        <li class="activity-item go4cycling">
+                            <span class="activity-icon">🏆</span>
+                            <span class="activity-time">16:30-17:00</span>
+                            <span class="activity-description">Ankomst til Roubaix Velodrome - målgang!</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🎉</span>
+                            <span class="activity-time">~17:00</span>
+                            <span class="activity-description">Målgang og fejring af vinderne</span>
+                        </li>
+                        <li class="activity-item go4cycling">
+                            <span class="activity-icon">🚍</span>
+                            <span class="activity-time">17:15-17:45</span>
+                            <span class="activity-description">Retur til Kortrijk</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🍷</span>
+                            <span class="activity-time">Aften</span>
+                            <span class="activity-description">Aftensmad og genoplevelse af dagens begivenheder</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header" onclick="toggleDay('mandag')">
+                    <div>
+                        <div class="day-title">MANDAG <span class="day-date">12. april</span></div>
+                        <div style="font-size: 0.85rem; color: var(--text-light); margin-top: 4px;">Hjemrejse</div>
+                    </div>
+                    <button class="toggle-btn" id="toggle-mandag">+</button>
+                </div>
+                <div class="day-content" id="mandag">
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <span class="activity-icon">☕</span>
+                            <span class="activity-time">Formiddag</span>
+                            <span class="activity-description">Morgenmad og pakning</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">🚖</span>
+                            <span class="activity-time">~10:00</span>
+                            <span class="activity-description">Transfer til Bruxelles Lufthavn</span>
+                        </li>
+                        <li class="activity-item">
+                            <span class="activity-icon">✈️</span>
+                            <span class="activity-time">Eftermiddag</span>
+                            <span class="activity-description">Fly tilbage til København</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>Paris-Roubaix 2027 <span class="footer-icon">🇫🇷</span> Cyklingsæsonens hårdeste klassiker <span class="footer-icon">🚵‍♂️</span></p>
+    </footer>
+    <script>
+        function toggleDay(dayId) {
+            const content = document.getElementById(dayId);
+            const button = document.getElementById('toggle-' + dayId);
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                button.classList.remove('rotate');
+                button.textContent = '+';
+            } else {
+                content.classList.add('show');
+                button.classList.add('rotate');
+                button.textContent = '−';
+            }
+        }
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.day-card, .stat-card, .info-banner, .map-container').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
