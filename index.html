@@ -230,11 +230,11 @@
         <div class="maps-container">
             <div class="map-wrapper">
                 <h3 class="map-title">Travel Route: Key Locations</h3>
-                <img class="map-image" src="travel_route_map.png" alt="Cartoonish tourist map showing Brussels, Kortrijk, Compiègne, and Roubaix">
+                <img class="map-image" src="travel_route_map.png" alt="Cartoonish tourist map showing Brussels, Kortrijk, Compiègne, and Roubaix" loading="lazy">
             </div>
             <div class="map-wrapper">
                 <h3 class="map-title">Paris-Roubaix Course 2027</h3>
-                <img class="map-image" src="course_map.png" alt="Cartoonish tourist map of the Paris-Roubaix course with start, finish, and key sectors">
+                <img class="map-image" src="course_map.png" alt="Cartoonish tourist map of the Paris-Roubaix course with start, finish, and key sectors" loading="lazy">
             </div>
         </div>
         
@@ -296,9 +296,6 @@
                 dayElement.appendChild(dayContent);
                 itineraryContainer.appendChild(dayElement);
             });
-            
-            // Open all days by default
-            document.querySelectorAll('.day').forEach(day => day.classList.add('active'));
         }
         
         // Render the itinerary when the page loads
