@@ -3,15 +3,15 @@
     "title": "Friday, April 9 – Arrival",
     "activities": [
       {
-        "time": "12:55",
+        "time": "08:30",
         "icon": "✈️",
         "description": "Depart Copenhagen (CPH) → Brussels (BRU) — Flight <span class=\"tbd-badge\">TBD</span>",
-        "details": "Flight to be confirmed. ~1h35 nonstop. Suggested departure window ~12:30–13:30 to arrive BRU by ~14:30. Check flysas.com or other carriers once the 2027 schedule is published.",
+        "details": "Flight to be confirmed. ~1h35 nonstop. Aiming for a morning departure (~07:00–10:00) to land BRU mid-morning. Check flysas.com or other carriers once the 2027 schedule is published.",
         "link": null,
         "go4cycling": false
       },
       {
-        "time": "14:30",
+        "time": "10:05",
         "icon": "🛬",
         "description": "Arrival at Brussels Airport (BRU)",
         "details": "Brussels Airport (Zaventem) is a single terminal. Baggage claim is typically 20–30 min after landing for Schengen flights.",
@@ -19,7 +19,7 @@
         "go4cycling": false
       },
       {
-        "time": "15:00",
+        "time": "10:30",
         "icon": "🚌",
         "description": "Transfer Brussels Airport → Kortrijk (~1.5 hours by coach/taxi)",
         "details": "By taxi/private transfer: ~DKK 600–745, ~1h15. By train: Brussels-Airport-Zaventem → Brussels-Midi → Kortrijk (IC, ~1h45 total with connection). Book private transfer in advance for convenience.",
@@ -27,10 +27,10 @@
         "go4cycling": false
       },
       {
-        "time": "16:30",
+        "time": "12:00",
         "icon": "🏨",
-        "description": "Check-in at NH Kortrijk <span class=\"tbd-badge\">TBD</span>",
-        "details": "Suggested hotel: NH Kortrijk (4-star, central, walking distance to the Grote Markt). Booking to be confirmed.",
+        "description": "Bag drop / check-in at NH Kortrijk <span class=\"tbd-badge\">TBD</span>",
+        "details": "Suggested hotel: NH Kortrijk (4-star, central, walking distance to the Grote Markt). Standard check-in is 15:00 — if rooms aren't ready, drop bags and explore Kortrijk. Booking to be confirmed.",
         "link": "https://www.nh-hotels.com/en/hotel/nh-kortrijk",
         "go4cycling": false
       },
