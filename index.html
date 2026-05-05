@@ -395,7 +395,7 @@
     <h1>Paris<em>-</em>Roubaix</h1>
     <p class="hero-sub">🍺 SPRING TRIP 🍺</p>
     <div class="hero-badges">
-        <span class="badge"><span class="dot"></span>Cobbled Classic &nbsp;·&nbsp; 257 km</span>
+        <span class="badge"><span class="dot"></span>3 Nights in Belgium</span>
         <span class="badge"><span class="dot"></span>Race Day VIP Bus Experience</span>
         <span class="badge"><span class="dot"></span>Roubaix Velodrome Finish</span>
     </div>
@@ -602,174 +602,148 @@
             </svg>
         </div>
 
-        <!-- RACE COURSE MAP -->
+        <!-- ARENBERG FOREST APPETIZER -->
         <div class="map-card">
             <div class="map-card-header">
                 <div class="mc-dot"></div>
-                <h3>Paris-Roubaix</h3>
+                <h3>Trouée d'Arenberg</h3>
             </div>
-            <svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrated Paris-Roubaix 2027 course map from Compiègne to Roubaix">
+            <svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Atmospheric illustration of the Arenberg forest pavé with the top Paris-Roubaix sectors named on top">
                 <defs>
-                    <pattern id="farmA" width="22" height="22" patternUnits="userSpaceOnUse">
-                        <rect width="22" height="22" fill="#d2e89e"/>
-                        <line x1="0" y1="11" x2="22" y2="11" stroke="#bcd888" stroke-width="0.6" opacity="0.6"/>
-                        <line x1="11" y1="0" x2="11" y2="22" stroke="#bcd888" stroke-width="0.4" opacity="0.4"/>
+                    <!-- Misty Nord-Pas-de-Calais sky -->
+                    <linearGradient id="aSky" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%"  stop-color="#7a8478"/>
+                        <stop offset="55%" stop-color="#414a3c"/>
+                        <stop offset="100%" stop-color="#1f2718"/>
+                    </linearGradient>
+                    <!-- Bright mist at the vanishing point -->
+                    <radialGradient id="aMist" cx="50%" cy="48%" r="35%">
+                        <stop offset="0%"   stop-color="#e2e4d0" stop-opacity="0.65"/>
+                        <stop offset="100%" stop-color="#e2e4d0" stop-opacity="0"/>
+                    </radialGradient>
+                    <!-- Vignette around the edges -->
+                    <radialGradient id="aVig" cx="50%" cy="55%" r="75%">
+                        <stop offset="55%"  stop-color="rgba(0,0,0,0)"/>
+                        <stop offset="100%" stop-color="rgba(0,0,0,0.7)"/>
+                    </radialGradient>
+                    <!-- Top shade so the appetizer text reads cleanly -->
+                    <linearGradient id="aTop" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%"   stop-color="rgba(8,8,12,0.95)"/>
+                        <stop offset="80%"  stop-color="rgba(8,8,12,0.45)"/>
+                        <stop offset="100%" stop-color="rgba(8,8,12,0)"/>
+                    </linearGradient>
+                    <!-- Wet road darkness -->
+                    <linearGradient id="aRoad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%"   stop-color="#22190f"/>
+                        <stop offset="100%" stop-color="#7a6240"/>
+                    </linearGradient>
+                    <!-- Cobble texture -->
+                    <pattern id="aCob" width="22" height="14" patternUnits="userSpaceOnUse">
+                        <rect width="22" height="14" fill="#372b1d"/>
+                        <ellipse cx="5.5"  cy="3.5"  rx="4.6" ry="3" fill="#76583c"/>
+                        <ellipse cx="16.5" cy="3.5"  rx="4.6" ry="3" fill="#523a24"/>
+                        <ellipse cx="5.5"  cy="10.5" rx="4.6" ry="3" fill="#523a24"/>
+                        <ellipse cx="16.5" cy="10.5" rx="4.6" ry="3" fill="#76583c"/>
                     </pattern>
-                    <pattern id="farmB" width="18" height="18" patternUnits="userSpaceOnUse">
-                        <rect width="18" height="18" fill="#c4dd90"/>
-                    </pattern>
-                    <pattern id="hillR" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
-                        <line x1="0" y1="0" x2="0" y2="8" stroke="#9a8840" stroke-width="0.6" opacity="0.55"/>
-                    </pattern>
-                    <pattern id="cobR" width="8" height="6" patternUnits="userSpaceOnUse">
-                        <rect width="8" height="6" fill="#9a7a50"/>
-                        <rect x="0.5" y="0.5" width="3.2" height="2.3" rx="0.3" fill="#b09060"/>
-                        <rect x="4.5" y="0.5" width="3" height="2.3" rx="0.3" fill="#806040"/>
-                        <rect x="0.5" y="3.3" width="3.2" height="2.3" rx="0.3" fill="#806040"/>
-                        <rect x="4.5" y="3.3" width="3"   height="2.3" rx="0.3" fill="#b09060"/>
-                    </pattern>
-                    <marker id="rteArr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                        <path d="M0,0 L0,6 L8,3 Z" fill="#c0392b"/>
-                    </marker>
-                    <filter id="rPin">
-                        <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.35"/>
-                    </filter>
+                    <!-- Trapezoidal road clip for perspective -->
+                    <clipPath id="aRoadClip">
+                        <polygon points="60,400 420,400 252,200 228,200"/>
+                    </clipPath>
                 </defs>
 
-                <!-- FARMLAND BASE -->
-                <!-- coord system: x=(lon-2.3)/1.5*480, y=(50.9-lat)/1.7*400 -->
-                <rect width="480" height="400" fill="url(#farmA)"/>
+                <!-- SKY -->
+                <rect width="480" height="400" fill="url(#aSky)"/>
 
-                <!-- FIELD PATCHES (varied green tones) -->
-                <rect x="0"   y="180" width="210" height="130" fill="url(#farmB)" opacity="0.7"/>
-                <rect x="290" y="100" width="190" height="160" fill="url(#farmB)" opacity="0.55"/>
-                <rect x="100" y="285" width="160" height="115" fill="#c8e098" opacity="0.65"/>
-                <rect x="0"   y="310" width="130" height="90"  fill="#b8d888" opacity="0.6"/>
+                <!-- DISTANT MIST GLOW -->
+                <rect width="480" height="400" fill="url(#aMist)"/>
 
-                <!-- HILL HATCHING south of Compiègne (Valois plateau) -->
-                <path d="M 0,315 L 190,308 L 230,328 L 210,400 L 0,400 Z"
-                      fill="url(#hillR)" opacity="0.45"/>
-                <!-- Gentle rise east of Arenberg (Condé-sur-l'Escaut area) -->
-                <path d="M 350,70 L 480,60 L 480,205 L 390,215 Z"
-                      fill="url(#hillR)" opacity="0.28"/>
+                <!-- HORIZON TREE LINE silhouette -->
+                <path d="M0,205 L18,199 L34,203 L52,197 L68,203 L84,197 L102,201 L118,197 L134,203 L150,199
+                         L168,205 L184,199 L202,203 L218,197 L234,201 L252,197 L270,201 L286,197 L302,203
+                         L318,199 L334,203 L352,199 L368,205 L386,201 L402,205 L418,199 L434,203 L452,199
+                         L468,203 L480,201 L480,220 L0,220 Z"
+                      fill="#28321e" opacity="0.65"/>
 
-                <!-- FORÊT DE COMPIÈGNE (forest block, south-west of start) -->
-                <ellipse cx="110" cy="366" rx="95" ry="28" fill="#88b860" opacity="0.55"/>
-                <ellipse cx="75"  cy="378" rx="58" ry="20" fill="#78a850" opacity="0.45"/>
-                <text x="110" y="370" text-anchor="middle" font-size="8" fill="#3a6020" font-family="Georgia,serif" font-style="italic" opacity="0.8">Forêt de Compiègne</text>
-
-                <!-- RIVERS / CANALS -->
-                <!-- Oise (flows through Compiègne N-S) -->
-                <path d="M 163,400 C 166,385 168,372 170,348"
-                      fill="none" stroke="#4a88b0" stroke-width="2.5" opacity="0.7"/>
-                <text x="173" y="395" font-size="7" fill="#2a5870" font-family="Georgia,serif" font-style="italic" opacity="0.85">Oise</text>
-
-                <!-- Canal du Nord (N-S through centre) -->
-                <path d="M 224,400 C 228,375 238,330 252,278 C 266,235 282,202 302,172 C 314,150 296,132 252,126"
-                      fill="none" stroke="#4a88b0" stroke-width="1.8" opacity="0.65"/>
-                <text transform="translate(286,316) rotate(-68)" font-size="7" fill="#2a5870" font-family="Georgia,serif" font-style="italic" opacity="0.8">Canal du Nord</text>
-
-                <!-- Scarpe river (roughly E-W in north) -->
-                <path d="M 76,150 C 120,145 165,142 214,135 C 244,130 264,126 295,125 C 340,123 374,124 424,127"
-                      fill="none" stroke="#4a88b0" stroke-width="1.8" opacity="0.65"/>
-                <text x="125" y="142" font-size="7" fill="#2a5870" font-family="Georgia,serif" font-style="italic" opacity="0.85">Scarpe</text>
-
-                <!-- Deûle canal (near Lille/Roubaix) -->
-                <path d="M 175,76 C 212,70 248,65 282,49"
-                      fill="none" stroke="#4a88b0" stroke-width="1.5" opacity="0.6"/>
-
-                <!-- GRID LINES -->
-                <g stroke="#8a8a60" stroke-width="0.3" stroke-dasharray="4,9" opacity="0.45">
-                    <line x1="0" y1="80"  x2="480" y2="80"/>
-                    <line x1="0" y1="160" x2="480" y2="160"/>
-                    <line x1="0" y1="240" x2="480" y2="240"/>
-                    <line x1="0" y1="320" x2="480" y2="320"/>
-                    <line x1="96"  y1="0" x2="96"  y2="400"/>
-                    <line x1="192" y1="0" x2="192" y2="400"/>
-                    <line x1="288" y1="0" x2="288" y2="400"/>
-                    <line x1="384" y1="0" x2="384" y2="400"/>
+                <!-- MID-GROUND TREES (left) -->
+                <g opacity="0.92">
+                    <rect x="76"  y="160" width="6" height="62" fill="#14140c"/>
+                    <ellipse cx="79"  cy="160" rx="14" ry="22" fill="#243018"/>
+                    <rect x="116" y="172" width="5" height="44" fill="#14140c"/>
+                    <ellipse cx="118.5" cy="172" rx="11" ry="16" fill="#243018"/>
+                    <rect x="150" y="178" width="4" height="32" fill="#14140c"/>
+                    <ellipse cx="152" cy="178" rx="9" ry="13" fill="#243018"/>
+                    <rect x="178" y="183" width="3" height="22" fill="#14140c"/>
+                    <ellipse cx="179.5" cy="183" rx="7" ry="10" fill="#243018"/>
+                </g>
+                <!-- MID-GROUND TREES (right) -->
+                <g opacity="0.92">
+                    <rect x="299" y="183" width="3" height="22" fill="#14140c"/>
+                    <ellipse cx="300.5" cy="183" rx="7" ry="10" fill="#243018"/>
+                    <rect x="326" y="178" width="4" height="32" fill="#14140c"/>
+                    <ellipse cx="328" cy="178" rx="9" ry="13" fill="#243018"/>
+                    <rect x="359" y="172" width="5" height="44" fill="#14140c"/>
+                    <ellipse cx="361.5" cy="172" rx="11" ry="16" fill="#243018"/>
+                    <rect x="398" y="160" width="6" height="62" fill="#14140c"/>
+                    <ellipse cx="401" cy="160" rx="14" ry="22" fill="#243018"/>
                 </g>
 
-                <!-- RACE ROUTE (shadow then line) -->
-                <path d="M 170,350 C 218,297 282,220 349,117 C 364,100 346,87 300,83 C 281,81 263,80 246,82 L 238,81 C 241,65 257,54 278,51"
-                      fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M 170,348 C 218,295 282,218 349,115 C 364,98 346,85 300,81 C 281,79 263,78 246,80 L 238,79 C 241,63 257,52 278,49"
-                      fill="none" stroke="#c0392b" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <!-- Direction arrows on route -->
-                <path d="M 238,218 C 256,200 274,183 291,167" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#rteArr)"/>
-                <path d="M 334,105 C 322,95 306,86 292,82"   fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#rteArr)"/>
-                <path d="M 242,79 C 248,66 260,57 272,52"    fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#rteArr)"/>
-
-                <!-- COBBLED SECTOR MARKERS -->
-                <!-- Arenberg (route heading west at this point) -->
-                <rect x="335" y="108" width="26" height="14" rx="2"
-                      fill="url(#cobR)" stroke="#5a3010" stroke-width="1.5"
-                      transform="rotate(-38,349,115)"/>
-                <!-- Mons-en-Pévèle -->
-                <rect x="236" y="73" width="22" height="13" rx="2"
-                      fill="url(#cobR)" stroke="#5a3010" stroke-width="1.5"
-                      transform="rotate(10,249,78)"/>
-                <!-- Carrefour de l'Arbre -->
-                <rect x="219" y="71" width="22" height="13" rx="2"
-                      fill="url(#cobR)" stroke="#5a3010" stroke-width="1.5"
-                      transform="rotate(10,231,77)"/>
-
-                <!-- CITY PINS -->
-                <!-- Compiègne (START) -->
-                <circle cx="170" cy="348" r="10" fill="#c07010" stroke="#f0e6c4" stroke-width="2" filter="url(#rPin)"/>
-                <text x="170" y="352" text-anchor="middle" font-size="11" fill="#fff" font-family="Georgia,serif" font-weight="bold">S</text>
-                <text x="170" y="370" text-anchor="middle" font-size="11" font-weight="700" fill="#2c1a0e" font-family="Georgia,serif">Compiègne</text>
-                <text x="170" y="381" text-anchor="middle" font-size="8"  fill="#7a4010" font-family="Georgia,serif" font-style="italic">START · km 0</text>
-
-                <!-- Arenberg sector -->
-                <circle cx="349" cy="115" r="7" fill="#9a7050" stroke="#f0e6c4" stroke-width="1.5" filter="url(#rPin)"/>
-                <text x="359" y="106" font-size="10" font-weight="700" fill="#2c1a0e" font-family="Georgia,serif">Arenberg</text>
-                <text x="359" y="117" font-size="8"  fill="#5a3010" font-family="Georgia,serif" font-style="italic">★★★★★  km 162</text>
-
-                <!-- Mons-en-Pévèle -->
-                <circle cx="246" cy="80" r="7" fill="#9a7050" stroke="#f0e6c4" stroke-width="1.5" filter="url(#rPin)"/>
-                <!-- label right with leader line -->
-                <line x1="253" y1="80" x2="274" y2="70" stroke="#5a3010" stroke-width="0.8" opacity="0.7"/>
-                <text x="277" y="67" font-size="10" font-weight="700" fill="#2c1a0e" font-family="Georgia,serif">Mons-en-Pévèle</text>
-                <text x="277" y="78" font-size="8"  fill="#5a3010" font-family="Georgia,serif" font-style="italic">★★★★  km 200</text>
-
-                <!-- Carrefour de l'Arbre -->
-                <circle cx="238" cy="79" r="7" fill="#9a7050" stroke="#f0e6c4" stroke-width="1.5" filter="url(#rPin)"/>
-                <!-- label left with leader line -->
-                <line x1="231" y1="79" x2="210" y2="67" stroke="#5a3010" stroke-width="0.8" opacity="0.7"/>
-                <text x="207" y="59" text-anchor="end" font-size="10" font-weight="700" fill="#2c1a0e" font-family="Georgia,serif">Carrefour</text>
-                <text x="207" y="70" text-anchor="end" font-size="10" font-weight="700" fill="#2c1a0e" font-family="Georgia,serif">de l'Arbre</text>
-                <text x="207" y="81" text-anchor="end" font-size="8"  fill="#5a3010" font-family="Georgia,serif" font-style="italic">★★★★★  km 238</text>
-
-                <!-- Roubaix (FINISH) -->
-                <circle cx="282" cy="49" r="10" fill="#2d8c4e" stroke="#f0e6c4" stroke-width="2" filter="url(#rPin)"/>
-                <text x="282" y="53" text-anchor="middle" font-size="11" fill="#fff" font-family="Georgia,serif" font-weight="bold">F</text>
-                <text x="295" y="38" font-size="11" font-weight="700" fill="#2c1a0e" font-family="Georgia,serif">Roubaix</text>
-                <text x="295" y="49" font-size="8"  fill="#2d7a40" font-family="Georgia,serif" font-style="italic">FINISH · Vélodrome · km 257</text>
-
-                <!-- COMPASS ROSE -->
-                <g transform="translate(446,354)">
-                    <circle r="22" fill="#f0e6c4" stroke="#8a7a5c" stroke-width="1"/>
-                    <polygon points="0,-18 4,-4 0,-8 -4,-4" fill="#c0392b"/>
-                    <polygon points="0,18 4,4 0,8 -4,4"   fill="#8a7a5c"/>
-                    <polygon points="18,0 4,-4 8,0 4,4"   fill="#8a7a5c"/>
-                    <polygon points="-18,0 -4,-4 -8,0 -4,4" fill="#8a7a5c"/>
-                    <circle r="3" fill="#8a7a5c"/>
-                    <text y="-25" text-anchor="middle" font-size="10" font-weight="700" fill="#2c1a0e" font-family="Georgia,serif">N</text>
+                <!-- FOREGROUND FRAME TREES (left) -->
+                <g>
+                    <ellipse cx="14"  cy="60"  rx="68" ry="135" fill="#141d10"/>
+                    <ellipse cx="32"  cy="120" rx="58" ry="170" fill="#1a2614"/>
+                    <rect x="0"  y="50"  width="50" height="350" fill="#0c0f08"/>
+                    <rect x="44" y="50"  width="14" height="350" fill="#171710"/>
+                    <rect x="58" y="80"  width="6"  height="320" fill="#22201a"/>
+                </g>
+                <!-- FOREGROUND FRAME TREES (right) -->
+                <g>
+                    <ellipse cx="466" cy="60"  rx="68" ry="135" fill="#141d10"/>
+                    <ellipse cx="448" cy="120" rx="58" ry="170" fill="#1a2614"/>
+                    <rect x="430" y="50"  width="50" height="350" fill="#0c0f08"/>
+                    <rect x="422" y="50"  width="14" height="350" fill="#171710"/>
+                    <rect x="416" y="80"  width="6"  height="320" fill="#22201a"/>
                 </g>
 
-                <!-- SCALE BAR -->
-                <g transform="translate(16,380)">
-                    <rect x="0" y="-4" width="40" height="8" fill="#c0392b"/>
-                    <rect x="40" y="-4" width="40" height="8" fill="#f0e6c4" stroke="#8a7a5c" stroke-width="0.8"/>
-                    <text x="0"  y="-8" font-size="8" fill="#2c1a0e" font-family="Georgia,serif" text-anchor="middle">0</text>
-                    <text x="40" y="-8" font-size="8" fill="#2c1a0e" font-family="Georgia,serif" text-anchor="middle">25</text>
-                    <text x="80" y="-8" font-size="8" fill="#2c1a0e" font-family="Georgia,serif" text-anchor="middle">50 km</text>
+                <!-- ROAD with cobble perspective -->
+                <g clip-path="url(#aRoadClip)">
+                    <polygon points="60,400 420,400 252,200 228,200" fill="url(#aRoad)"/>
+                    <!-- Stacked cobble bands shrinking toward the vanishing point fakes perspective -->
+                    <g transform="translate(60,360)"><rect width="360" height="40" fill="url(#aCob)"/></g>
+                    <g transform="translate(108,318) scale(0.78,0.78)"><rect width="320" height="55" fill="url(#aCob)"/></g>
+                    <g transform="translate(146,282) scale(0.58,0.62)"><rect width="320" height="60" fill="url(#aCob)"/></g>
+                    <g transform="translate(176,250) scale(0.42,0.5)"><rect width="320" height="65" fill="url(#aCob)"/></g>
+                    <g transform="translate(198,225) scale(0.28,0.4)"><rect width="320" height="65" fill="url(#aCob)"/></g>
+                    <g transform="translate(214,208) scale(0.18,0.3)"><rect width="320" height="65" fill="url(#aCob)"/></g>
+                    <!-- Faint centre crown highlight where the cobbles catch light -->
+                    <path d="M 240,200 L 246,400 L 234,400 Z" fill="#a8956c" opacity="0.15"/>
                 </g>
 
-                <!-- REGION LABELS -->
-                <text x="38"  y="205" font-size="11" fill="#5a7030" font-family="Georgia,serif" font-weight="bold" letter-spacing="2" opacity="0.55" transform="rotate(-5,38,205)">N. FRANCE</text>
-                <text x="48"  y="55"  font-size="11" fill="#5a7030" font-family="Georgia,serif" font-weight="bold" letter-spacing="2" opacity="0.55">BELGIUM</text>
+                <!-- Light at the end of the trench -->
+                <ellipse cx="240" cy="198" rx="34" ry="11" fill="#e6e7d2" opacity="0.55"/>
+                <ellipse cx="240" cy="198" rx="14" ry="5"  fill="#fff" opacity="0.6"/>
+
+                <!-- VIGNETTE -->
+                <rect width="480" height="400" fill="url(#aVig)"/>
+
+                <!-- TOP OVERLAY: appetizer block with the top sectors -->
+                <rect width="480" height="128" fill="url(#aTop)"/>
+                <text x="240" y="22" text-anchor="middle" fill="#e31e24"
+                      font-family="'Bebas Neue', sans-serif" font-size="11"
+                      letter-spacing="6" font-weight="700">L'ENFER DU NORD</text>
+                <text x="240" y="48" text-anchor="middle" fill="#fff"
+                      font-family="'Bebas Neue', sans-serif" font-size="22"
+                      letter-spacing="3" font-weight="700">★ TOP PAVÉ SECTORS ★</text>
+                <g font-family="'Inter', sans-serif" font-weight="700" font-size="10" letter-spacing="1">
+                    <text x="240" y="72"  text-anchor="middle" fill="#f5c518">★★★★★  TROUÉE D'ARENBERG  ·  KM 162</text>
+                    <text x="240" y="90"  text-anchor="middle" fill="#f5c518">★★★★★  MONS-EN-PÉVÈLE  ·  KM 209</text>
+                    <text x="240" y="108" text-anchor="middle" fill="#f5c518">★★★★★  CARREFOUR DE L'ARBRE  ·  KM 240</text>
+                </g>
+
+                <!-- BOTTOM CAPTION -->
+                <rect x="0" y="370" width="480" height="30" fill="rgba(0,0,0,0.6)"/>
+                <text x="240" y="389" text-anchor="middle" fill="#fff"
+                      font-family="'Inter', sans-serif" font-size="9"
+                      font-weight="600" letter-spacing="3">TROUÉE D'ARENBERG  ·  2 400 m  ·  ★★★★★</text>
             </svg>
         </div>
 
