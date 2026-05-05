@@ -37,7 +37,7 @@
       {
         "time": "18:00",
         "icon": "🍽️",
-        "description": "Dinner and socializing in Kortrijk",
+        "description": "Dinner & drinks in Kortrijk",
         "details": "The Grote Markt and surrounding streets offer a wide selection of restaurants. Recommended: Den Hoed (Belgian classics) or Brasserie Den Dyver.",
         "link": null,
         "go4cycling": false
@@ -90,8 +90,16 @@
       {
         "time": "19:00",
         "icon": "🍷",
-        "description": "Dinner and socializing in Kortrijk",
-        "details": "Relaxed evening in Kortrijk ahead of the early race-day start. The Broelkaai area along the Leie river has several bars and restaurants with outdoor terraces.",
+        "description": "Dinner & drinks in Kortrijk",
+        "details": "Relaxed evening ahead of the early race-day start. The Broelkaai area along the Leie river has several bars and restaurants with outdoor terraces.",
+        "link": null,
+        "go4cycling": false
+      },
+      {
+        "time": "21:00",
+        "icon": "🛏️",
+        "description": "Early night — 05:00 wake-up tomorrow!",
+        "details": "Race day starts brutally early. Aim to be in bed by 21:00 to get a decent night's sleep before the 05:00 alarm.",
         "link": null,
         "go4cycling": false
       }
@@ -143,16 +151,8 @@
       {
         "time": "10:05",
         "icon": "🏁",
-        "description": "Bus departs – race starts at 10:15",
-        "details": "The peloton is neutralised through Compiègne city before the race goes live. The bus heads to the first strategic road-side position.",
-        "link": null,
-        "go4cycling": true
-      },
-      {
-        "time": "10:05",
-        "icon": "🌍",
-        "description": "Follow the race from key positions along the route",
-        "details": "Go4Cycling plans multiple roadside stops along the course, including iconic cobbled sectors. Exact locations confirmed closer to race day.",
+        "description": "Bus departs – race starts at 10:15, follow from key positions along the route",
+        "details": "The peloton is neutralised through Compiègne city before the race goes live. The bus heads to the first strategic roadside position. Go4Cycling plans multiple stops along the course including iconic cobbled sectors — exact locations confirmed closer to race day.",
         "link": "https://www.paris-roubaix.fr",
         "go4cycling": true
       },
@@ -191,7 +191,7 @@
       {
         "time": "19:00",
         "icon": "🍷",
-        "description": "Dinner and reliving the day's events in Kortrijk",
+        "description": "Dinner & drinks — relive the day's madness",
         "details": "Celebrate at a restaurant in Kortrijk. Consider booking in advance — the area sees race-day crowds on Paris-Roubaix Sunday.",
         "link": null,
         "go4cycling": false
