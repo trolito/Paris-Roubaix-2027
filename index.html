@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paris Roubaix Tur 2027 🇫🇷🚴‍♂️</title>
+    <title>Paris-Roubaix 2027 🇫🇷🚴‍♂️</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,11 +12,12 @@
             --primary: #e31e24;
             --primary-dark: #a0151b;
             --secondary: #ffd700;
-            --background: #f8f8f8;
+            --background: #f0f2f5;
             --text: #2c2c2c;
             --text-light: #666;
             --card-bg: #ffffff;
             --border: #e0e0e0;
+            --highlight: #f8f9fa;
         }
         * {
             margin: 0;
@@ -27,10 +28,7 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--text);
-            background-color: var(--background);
-            background-image:
-                radial-gradient(circle at 10% 20%, rgba(227, 30, 36, 0.03) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(255, 215, 0, 0.03) 0%, transparent 20%);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
             min-height: 100vh;
         }
         .container {
@@ -40,25 +38,29 @@
         }
         header {
             text-align: center;
-            padding: 30px 0;
+            padding: 40px 0;
+            position: relative;
         }
         header h1 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             color: var(--primary);
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+            letter-spacing: 1px;
         }
         header p {
             font-size: 1.2rem;
             color: var(--text-light);
+            font-weight: 500;
         }
         .itinerary {
             background: var(--card-bg);
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
             margin: 20px 0;
             overflow: hidden;
+            border: 1px solid rgba(227, 30, 36, 0.1);
         }
         .day {
             border-bottom: 1px solid var(--border);
@@ -67,37 +69,44 @@
             border-bottom: none;
         }
         .day-header {
-            background: var(--primary);
+            background: linear-gradient(90deg, var(--primary), #c9181e);
             color: white;
-            padding: 15px 20px;
+            padding: 18px 24px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            transition: background 0.3s ease;
         }
         .day-header:hover {
-            background: var(--primary-dark);
+            background: linear-gradient(90deg, var(--primary-dark), #8b1316);
         }
         .day-content {
             padding: 0;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            transition: max-height 0.4s ease-out, padding 0.3s ease;
         }
         .day.active .day-content {
             max-height: 2000px;
             padding: 20px;
+            background: var(--highlight);
         }
         .day-content ul {
             list-style: none;
         }
         .day-content li {
-            padding: 12px 0;
+            padding: 14px 0;
             border-bottom: 1px solid var(--border);
             display: flex;
             align-items: flex-start;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .day-content li:hover {
+            transform: translateX(4px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
         .day-content li:last-child {
             border-bottom: none;
@@ -105,44 +114,50 @@
         .time {
             font-weight: 700;
             color: var(--primary);
-            min-width: 80px;
+            min-width: 90px;
             margin-right: 15px;
+            font-size: 0.95rem;
         }
         .activity {
             flex: 1;
+            font-size: 1rem;
         }
         .activity.go4cycling {
-            background: linear-gradient(to right, rgba(255, 215, 0, 0.15), transparent);
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.12), transparent);
             border-left: 4px solid var(--secondary);
-            padding-left: 10px;
-            margin-left: -10px;
+            padding-left: 12px;
+            margin-left: -12px;
         }
         .icon {
             margin-right: 10px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         .go4cycling .icon {
             color: var(--secondary);
         }
         .toggle-icon {
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease;
+            font-size: 1.2rem;
         }
         .day.active .toggle-icon {
             transform: rotate(180deg);
         }
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
+            }
+            header p {
+                font-size: 1.1rem;
             }
             .container {
                 padding: 10px;
             }
             .day-header {
-                padding: 12px 15px;
-                font-size: 1rem;
+                padding: 14px 18px;
+                font-size: 1.1rem;
             }
             .time {
-                min-width: 60px;
+                min-width: 70px;
                 font-size: 0.9rem;
             }
             .activity {
@@ -151,50 +166,54 @@
         }
         .footer {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             color: var(--text-light);
-            font-size: 0.9rem;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .footer-icon {
+            margin: 0 8px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Paris Roubaix Tur 2027</h1>
-            <p>9. - 13. april 2027 | Kortrijk & Gent, Belgien</p>
+            <h1>Paris-Roubaix 2027</h1>
+            <p>April 9–12, 2027 | Kortrijk & Ghent, Belgium</p>
         </header>
         
         <div class="itinerary">
             <div class="day">
                 <div class="day-header" onclick="toggleDay(this)">
-                    <span>Fredag, 9. april 2027</span>
+                    <span>Friday, April 9 – Arrival</span>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="day-content">
                     <ul>
                         <li>
                             <span class="time">08:00</span>
-                            <span class="activity"><span class="icon">🛫</span> Afgang fra København (CPH) med SAS fly til Bruxelles (BRU)</span>
+                            <span class="activity"><span class="icon">✈️</span> Depart Copenhagen (CPH) with SAS flight to Brussels (BRU)</span>
                         </li>
                         <li>
                             <span class="time">10:30</span>
-                            <span class="activity"><span class="icon">🚆</span> Ankomst til Bruxelles, transfer til Kortrijk (ca. 1,5 time)</span>
+                            <span class="activity"><span class="icon">🚆</span> Arrival in Brussels, transfer to Kortrijk (~1.5 hours)</span>
                         </li>
                         <li>
                             <span class="time">12:30</span>
-                            <span class="activity"><span class="icon">🏨</span> Check-in på Park Hotel Kortrijk</span>
+                            <span class="activity"><span class="icon">🏨</span> Check-in at Park Hotel Kortrijk</span>
                         </li>
                         <li>
                             <span class="time">14:00</span>
-                            <span class="activity"><span class="icon">🍽️</span> Frokost i Kortrijk</span>
+                            <span class="activity"><span class="icon">🍽️</span> Lunch in Kortrijk</span>
                         </li>
                         <li>
                             <span class="time">16:00</span>
-                            <span class="activity"><span class="icon">🚖</span> Transfer til Gent (ca. 30 minutter)</span>
+                            <span class="activity"><span class="icon">🚖</span> Transfer to Ghent (~30 minutes)</span>
                         </li>
                         <li>
                             <span class="time">18:00</span>
-                            <span class="activity"><span class="icon">🍷</span> Aftensmad og socialt samvær i Gent</span>
+                            <span class="activity"><span class="icon">🍷</span> Dinner and socializing in Ghent</span>
                         </li>
                     </ul>
                 </div>
@@ -202,26 +221,26 @@
             
             <div class="day">
                 <div class="day-header" onclick="toggleDay(this)">
-                    <span>Lørdag, 10. april 2027</span>
+                    <span>Saturday, April 10 – Ghent</span>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="day-content">
                     <ul>
                         <li>
                             <span class="time">09:00</span>
-                            <span class="activity"><span class="icon">🏛️</span> Sightseeing i Gent: Gravensteen, Graslei, Korenlei</span>
+                            <span class="activity"><span class="icon">🏛️</span> Sightseeing in Ghent: Gravensteen, Graslei, Korenlei</span>
                         </li>
                         <li>
                             <span class="time">12:00</span>
-                            <span class="activity"><span class="icon">🍽️</span> Frokost i Gent</span>
+                            <span class="activity"><span class="icon">🍽️</span> Lunch in Ghent</span>
                         </li>
                         <li>
                             <span class="time">14:00</span>
-                            <span class="activity"><span class="icon">🍺</span> Ølsmagning på en lokal bryggeri</span>
+                            <span class="activity"><span class="icon">🍺</span> Beer tasting at a local brewery</span>
                         </li>
                         <li>
                             <span class="time">18:00</span>
-                            <span class="activity"><span class="icon">🍷</span> Aftensmad og socialt samvær</span>
+                            <span class="activity"><span class="icon">🍷</span> Dinner and socializing</span>
                         </li>
                     </ul>
                 </div>
@@ -229,93 +248,58 @@
             
             <div class="day">
                 <div class="day-header" onclick="toggleDay(this)">
-                    <span>Søndag, 11. april 2027 - Paris-Roubaix 🏆</span>
+                    <span>Sunday, April 11 – Paris-Roubaix 🏆</span>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="day-content">
                     <ul>
                         <li>
                             <span class="time">05:00</span>
-                            <span class="activity"><span class="icon">☕</span> Tidligt op og morgenmad</span>
+                            <span class="activity"><span class="icon">☕</span> Early wake-up and breakfast</span>
                         </li>
                         <li>
                             <span class="time">06:00</span>
-                            <span class="activity go4cycling"><span class="icon">🚍</span> Mødepunkt i Kortrijk - Go4Cycling VIP bus</span>
+                            <span class="activity go4cycling"><span class="icon">🚍</span> Meeting point in Kortrijk - Go4Cycling VIP bus</span>
                         </li>
                         <li>
-                            <span class="time">06:15-08:30</span>
-                            <span class="activity go4cycling"><span class="icon">🚌</span> Transfer Kortrijk → Compiègne (2t) med kaffe, te & wienerbrød</span>
+                            <span class="time">06:15</span>
+                            <span class="activity go4cycling"><span class="icon">🚌</span> Transfer Kortrijk → Compiègne (2h) with coffee, tea & pastries</span>
                         </li>
                         <li>
-                            <span class="time">08:30-09:55</span>
-                            <span class="activity go4cycling"><span class="icon">🚴‍♂️</span> Startzonen i Compiègne - oplev holdbusserne og forberedelserne</span>
+                            <span class="time">08:30</span>
+                            <span class="activity go4cycling"><span class="icon">🚴‍♂️</span> Start area in Compiègne - experience team buses and preparations</span>
                         </li>
                         <li>
-                            <span class="time">09:55-10:05</span>
-                            <span class="activity go4cycling"><span class="icon">🚍</span> Retur til bussen</span>
+                            <span class="time">09:55</span>
+                            <span class="activity go4cycling"><span class="icon">🚍</span> Return to bus</span>
                         </li>
                         <li>
                             <span class="time">10:05</span>
-                            <span class="activity go4cycling"><span class="icon">🏁</span> Bussen kører - løbet starter kl. 10:15</span>
+                            <span class="activity go4cycling"><span class="icon">🏁</span> Bus departs - race starts at 10:15</span>
                         </li>
                         <li>
-                            <span class="time">10:05-12:00</span>
-                            <span class="activity go4cycling"><span class="icon">🌍</span> Følg løbet fra nøglepositioner langs ruten</span>
-                        </li>
-                        <li>
-                            <span class="time">12:00-12:30</span>
-                            <span class="activity go4cycling"><span class="icon">🍾</span> Frokostpause med madpakke & CAVA ombord</span>
-                        </li>
-                        <li>
-                            <span class="time">12:30-16:30</span>
-                            <span class="activity go4cycling"><span class="icon">🎬</span> Live oplevelser på flere strategiske punkter</span>
-                        </li>
-                        <li>
-                            <span class="time">16:30-17:00</span>
-                            <span class="activity go4cycling"><span class="icon">🏟️</span> Ankomst til Roubaix Velodrome - målgang!</span>
-                        </li>
-                        <li>
-                            <span class="time">~17:00</span>
-                            <span class="activity"><span class="icon">🎉</span> Målgang og fejring af vinderne</span>
-                        </li>
-                        <li>
-                            <span class="time">17:15-17:45</span>
-                            <span class="activity go4cycling"><span class="icon">🚍</span> Retur til Kortrijk</span>
-                        </li>
-                        <li>
-                            <span class="time">19:00</span>
-                            <span class="activity"><span class="icon">🍷</span> Aftensmad og genoplevelse af dagens begivenheder</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="day">
-                <div class="day-header" onclick="toggleDay(this)">
-                    <span>Mandag, 12. april 2027</span>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="day-content">
-                    <ul>
-                        <li>
-                            <span class="time">09:00</span>
-                            <span class="activity"><span class="icon">☕</span> Morgenmad</span>
-                        </li>
-                        <li>
-                            <span class="time">10:00</span>
-                            <span class="activity"><span class="icon">🛍️</span> Sidste indkøb og afslapning i Kortrijk</span>
+                            <span class="time">10:05</span>
+                            <span class="activity go4cycling"><span class="icon">🌍</span> Follow the race from key positions along the route</span>
                         </li>
                         <li>
                             <span class="time">12:00</span>
-                            <span class="activity"><span class="icon">🍽️</span> Frokost</span>
+                            <span class="activity go4cycling"><span class="icon">🍾</span> Lunch break with packed meal & CAVA on board</span>
                         </li>
                         <li>
-                            <span class="time">14:00</span>
-                            <span class="activity"><span class="icon">🚖</span> Transfer til Bruxelles</span>
+                            <span class="time">12:30</span>
+                            <span class="activity go4cycling"><span class="icon">🎬</span> Live experience at multiple strategic points</span>
                         </li>
                         <li>
-                            <span class="time">16:00</span>
-                            <span class="activity"><span class="icon">🛫</span> Fly til København</span>
+                            <span class="time">16:30</span>
+                            <span class="activity go4cycling"><span class="icon">🏟️</span> Arrival at Roubaix Velodrome - finish line!</span>
+                        </li>
+                        <li>
+                            <span class="time">17:15</span>
+                            <span class="activity go4cycling"><span class="icon">🚍</span> Return to Kortrijk</span>
+                        </li>
+                        <li>
+                            <span class="time">19:00</span>
+                            <span class="activity"><span class="icon">🍷</span> Dinner and reliving the day's events</span>
                         </li>
                     </ul>
                 </div>
@@ -323,22 +307,22 @@
             
             <div class="day">
                 <div class="day-header" onclick="toggleDay(this)">
-                    <span>Tirsdag, 13. april 2027</span>
+                    <span>Monday, April 12 – Departure</span>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="day-content">
                     <ul>
                         <li>
                             <span class="time">08:00</span>
-                            <span class="activity"><span class="icon">☕</span> Morgenmad og check-out</span>
+                            <span class="activity"><span class="icon">☕</span> Breakfast and check-out</span>
                         </li>
                         <li>
                             <span class="time">09:00</span>
-                            <span class="activity"><span class="icon">🚖</span> Transfer til Bruxelles lufthavn</span>
+                            <span class="activity"><span class="icon">🚖</span> Transfer to Brussels Airport (~1 hour)</span>
                         </li>
                         <li>
                             <span class="time">11:00</span>
-                            <span class="activity"><span class="icon">✈️</span> Afgang fra Bruxelles (BRU) med SAS fly til København (CPH)</span>
+                            <span class="activity"><span class="icon">✈️</span> SAS flight SK523: Brussels (BRU) → Copenhagen (CPH), 13:30–15:00</span>
                         </li>
                     </ul>
                 </div>
@@ -346,7 +330,12 @@
         </div>
         
         <div class="footer">
-            <p>God tur til Paris-Roubaix 2027! 🚴‍♂️💨</p>
+            <p>
+                <span>Enjoy Paris-Roubaix 2027!</span>
+                <span class="footer-icon">🇫🇷</span>
+                <span>Cycling's Toughest Classic</span>
+                <span class="footer-icon">🚴‍♂️</span>
+            </p>
         </div>
     </div>
     
