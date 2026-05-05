@@ -5,9 +5,9 @@
       {
         "time": "12:55",
         "icon": "✈️",
-        "description": "Depart Copenhagen (CPH) · SAS flight SK1593 → Brussels (BRU) 14:30",
-        "details": "Daily nonstop, ~1h35 flight. Check in online from 22h before departure. Terminal 3 at CPH. Arrive at airport by 11:30.",
-        "link": "https://www.flysas.com",
+        "description": "Depart Copenhagen (CPH) → Brussels (BRU) — Flight TBD",
+        "details": "Flight to be confirmed. ~1h35 nonstop. Suggested departure window ~12:30–13:30 to arrive BRU by ~14:30. Check flysas.com or other carriers once the 2027 schedule is published.",
+        "link": null,
         "go4cycling": false
       },
       {
@@ -228,9 +228,9 @@
       {
         "time": "15:10",
         "icon": "✈️",
-        "description": "SAS flight SK1594: Brussels (BRU) 15:10 → Copenhagen (CPH) 16:40",
-        "details": "Daily nonstop, ~1h30. Arrives CPH Terminal 3. Based on current SAS timetable — verify at flysas.com once the 2027 schedule is published.",
-        "link": "https://www.flysas.com",
+        "description": "Brussels (BRU) → Copenhagen (CPH) — Flight TBD",
+        "details": "Flight to be confirmed. ~1h30 nonstop. Suggested departure window ~15:00–16:00 to arrive CPH by ~17:00. Verify at flysas.com or other carriers once the 2027 schedule is published.",
+        "link": null,
         "go4cycling": false
       }
     ]
