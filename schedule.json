@@ -21,40 +21,32 @@
       {
         "time": "15:00",
         "icon": "🚌",
-        "description": "Transfer Brussels Airport → Kortrijk (~1.5 hours by coach/taxi)",
-        "details": "By taxi/private transfer: ~DKK 600–745, ~1h15. By train: Brussels-Airport-Zaventem → Brussels-Midi → Kortrijk (IC, ~1h45 total with connection). Book private transfer in advance for convenience.",
+        "description": "Transfer Brussels Airport → Ghent (~50 min by train or taxi)",
+        "details": "By train: direct IC Brussels-Airport-Zaventem → Ghent-Sint-Pieters, ~55 min, ~DKK 80 pp each way. By taxi/private transfer: ~DKK 450–670, ~50 min.",
         "link": null,
         "go4cycling": false
       },
       {
         "time": "16:30",
         "icon": "🏨",
-        "description": "Check-in at hotel in Kortrijk <span class=\"tbd-badge\">TBD</span>",
-        "details": "Hotel to be confirmed. Central options: Pullman Kortrijk, Park Inn by Radisson Kortrijk, or NH Kortrijk — all within walking distance of the Grote Markt.",
-        "link": null,
+        "description": "Check-in at NH Collection Gent <span class=\"tbd-badge\">TBD</span>",
+        "details": "Suggested hotel: NH Collection Gent (4-star, central, walking distance from Korenmarkt and Graslei). Booking to be confirmed.",
+        "link": "https://www.nh-collection.com/en/hotel/nh-collection-gent",
         "go4cycling": false
       },
       {
         "time": "18:00",
         "icon": "🍽️",
-        "description": "Dinner & drinks in Kortrijk",
-        "details": "The Grote Markt and surrounding streets offer a wide selection of restaurants. Recommended: Den Hoed (Belgian classics) or Brasserie Den Dyver.",
+        "description": "Dinner & drinks in Ghent",
+        "details": "Plenty of choice around Korenmarkt, Graslei and Patershol. The medieval centre is illuminated after dark — worth a walk along the quays.",
         "link": null,
         "go4cycling": false
       }
     ]
   },
   {
-    "title": "Saturday, April 10 – Ghent Day Trip",
+    "title": "Saturday, April 10 – Explore Ghent",
     "activities": [
-      {
-        "time": "09:00",
-        "icon": "🚆",
-        "description": "Train or coach from Kortrijk to Ghent (~30 minutes)",
-        "details": "NMBS Intercity trains run every 30 min between Kortrijk and Ghent-Sint-Pieters. A return ticket is ~DKK 75–110 pp. No reservation needed.",
-        "link": "https://www.belgiantrain.be",
-        "go4cycling": false
-      },
       {
         "time": "09:30",
         "icon": "🏛️",
@@ -66,9 +58,9 @@
       {
         "time": "12:30",
         "icon": "🍽️",
-        "description": "Lunch in Ghent",
-        "details": "The Patershol neighbourhood is Ghent's culinary heartland. Try Pakhuis (brasserie in a former warehouse) or Het Pand for a casual waterside lunch.",
-        "link": null,
+        "description": "Lunch at Artevelde",
+        "details": "Artevelde — city brewery + restaurant at Botermarkt 5, run by family brewery Huyghe. Weekday €25 lunch menu (soup, choice of three mains incl. veggie, coffee). House beers brewed on-site, including the Artevelde Leute (silver medal at the Brussels Beer Challenge).",
+        "link": "https://artevelde.be/en/",
         "go4cycling": false
       },
       {
@@ -80,18 +72,10 @@
         "go4cycling": false
       },
       {
-        "time": "17:30",
-        "icon": "🚆",
-        "description": "Return to Kortrijk (~30 minutes)",
-        "details": "IC trains back to Kortrijk depart Ghent-Sint-Pieters approximately every 30 min throughout the evening.",
-        "link": "https://www.belgiantrain.be",
-        "go4cycling": false
-      },
-      {
         "time": "19:00",
         "icon": "🍷",
-        "description": "Dinner & drinks in Kortrijk",
-        "details": "Relaxed evening ahead of the early race-day start. The Broelkaai area along the Leie river has several bars and restaurants with outdoor terraces.",
+        "description": "Dinner & drinks in Ghent",
+        "details": "Relaxed evening ahead of the early race-day start. Patershol is full of small restaurants; the quays around Graslei are perfect for an after-dinner drink.",
         "link": null,
         "go4cycling": false
       },
@@ -119,16 +103,16 @@
       {
         "time": "06:00",
         "icon": "🚍",
-        "description": "Meeting point in Kortrijk – Go4Cycling VIP bus",
-        "details": "Confirm the exact pick-up point with Go4Cycling before the trip. Have your booking confirmation ready.",
+        "description": "Meeting point in Ghent – Go4Cycling VIP bus",
+        "details": "Confirm the exact pick-up point with Go4Cycling before the trip — Go4Cycling typically picks up in central Ghent for Paris-Roubaix bookings. Have your booking confirmation ready.",
         "link": "https://www.go4cycling.be",
         "go4cycling": true
       },
       {
         "time": "06:15",
         "icon": "🚌",
-        "description": "Transfer Kortrijk → Compiègne (~2h) with coffee, tea & pastries",
-        "details": "~250 km by coach. Compiègne is the traditional start city of Paris-Roubaix since 1977. Pastries and hot drinks served on board.",
+        "description": "Transfer Ghent → Compiègne (~2h30) with coffee, tea & pastries",
+        "details": "~290 km by coach. Compiègne is the traditional start city of Paris-Roubaix since 1977. Pastries and hot drinks served on board.",
         "link": null,
         "go4cycling": true
       },
@@ -183,8 +167,8 @@
       {
         "time": "17:15",
         "icon": "🚍",
-        "description": "Return to Kortrijk",
-        "details": "~1h drive from Roubaix Velodrome back to Kortrijk. Roubaix is just across the Belgian border.",
+        "description": "Return to Ghent",
+        "details": "~1h30 drive from Roubaix Velodrome back to Ghent.",
         "link": null,
         "go4cycling": true
       },
@@ -192,7 +176,7 @@
         "time": "19:00",
         "icon": "🍷",
         "description": "Dinner & drinks — relive the day's madness",
-        "details": "Celebrate at a restaurant in Kortrijk. Consider booking in advance — the area sees race-day crowds on Paris-Roubaix Sunday.",
+        "details": "Celebrate at a restaurant in Ghent. Consider booking in advance — the area sees race-day crowds on Paris-Roubaix Sunday.",
         "link": null,
         "go4cycling": false
       }
@@ -205,15 +189,15 @@
         "time": "09:00",
         "icon": "☕",
         "description": "Breakfast and hotel check-out",
-        "details": "Standard checkout is 12:00 noon, but confirm with the hotel. Luggage storage is usually available if you want to explore Kortrijk in the morning before heading to the airport.",
+        "details": "Standard checkout is 12:00 noon, but confirm with the hotel. Luggage storage is usually available if you want to explore Ghent in the morning before heading to the airport.",
         "link": null,
         "go4cycling": false
       },
       {
         "time": "13:00",
         "icon": "🚌",
-        "description": "Transfer Kortrijk → Brussels Airport (~1.5 hours by coach/taxi)",
-        "details": "Brussels Airport (BRU) is ~75 km from Kortrijk, typically 1h–1h20 by car depending on traffic. Book a taxi or private transfer the day before.",
+        "description": "Transfer Ghent → Brussels Airport (~50 min by train or taxi)",
+        "details": "Direct IC train Ghent-Sint-Pieters → Brussels-Airport-Zaventem, ~55 min, ~DKK 80 pp. By taxi/private transfer: ~50 min depending on traffic. Book ahead either way.",
         "link": null,
         "go4cycling": false
       },
