@@ -35,6 +35,14 @@
         "go4cycling": false
       },
       {
+        "time": "16:00",
+        "icon": "🍺",
+        "description": "Arrival beers in Kortrijk",
+        "details": "Settle in with a first round on a Kortrijk terrace. The Grote Markt and Broelkaai (along the Leie river) both have plenty of options for a relaxed afternoon beer.",
+        "link": null,
+        "go4cycling": false
+      },
+      {
         "time": "18:00",
         "icon": "🍽️",
         "description": "Dinner & drinks in Kortrijk",
