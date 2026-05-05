@@ -1,0 +1,238 @@
+[
+  {
+    "title": "Friday, April 9 – Arrival",
+    "activities": [
+      {
+        "time": "12:55",
+        "icon": "✈️",
+        "description": "Depart Copenhagen (CPH) · SAS flight SK1593 → Brussels (BRU) 14:30",
+        "details": "Daily nonstop, ~1h35 flight. Check in online from 22h before departure. Terminal 3 at CPH. Arrive at airport by 11:30.",
+        "link": "https://www.flysas.com",
+        "go4cycling": false
+      },
+      {
+        "time": "14:30",
+        "icon": "🛬",
+        "description": "Arrival at Brussels Airport (BRU)",
+        "details": "Brussels Airport (Zaventem) is a single terminal. Baggage claim is typically 20–30 min after landing for Schengen flights.",
+        "link": null,
+        "go4cycling": false
+      },
+      {
+        "time": "15:00",
+        "icon": "🚌",
+        "description": "Transfer Brussels Airport → Kortrijk (~1.5 hours by coach/taxi)",
+        "details": "By taxi/private transfer: ~€80–100, ~1h15. By train: Brussels-Airport-Zaventem → Brussels-Midi → Kortrijk (IC, ~1h45 total with connection). Book private transfer in advance for convenience.",
+        "link": null,
+        "go4cycling": false
+      },
+      {
+        "time": "16:30",
+        "icon": "🏨",
+        "description": "Check-in at hotel in Kortrijk (TBD)",
+        "details": "Hotel to be confirmed. Central options: Pullman Kortrijk, Park Inn by Radisson Kortrijk, or NH Kortrijk — all within walking distance of the Grote Markt.",
+        "link": null,
+        "go4cycling": false
+      },
+      {
+        "time": "18:00",
+        "icon": "🍽️",
+        "description": "Dinner and socializing in Kortrijk",
+        "details": "The Grote Markt and surrounding streets offer a wide selection of restaurants. Recommended: Den Hoed (Belgian classics) or Brasserie Den Dyver.",
+        "link": null,
+        "go4cycling": false
+      }
+    ]
+  },
+  {
+    "title": "Saturday, April 10 – Ghent Day Trip",
+    "activities": [
+      {
+        "time": "09:00",
+        "icon": "🚆",
+        "description": "Train or coach from Kortrijk to Ghent (~30 minutes)",
+        "details": "NMBS Intercity trains run every 30 min between Kortrijk and Ghent-Sint-Pieters. A return ticket is ~€10–15 pp. No reservation needed.",
+        "link": "https://www.belgiantrain.be",
+        "go4cycling": false
+      },
+      {
+        "time": "09:30",
+        "icon": "🏛️",
+        "description": "Sightseeing in Ghent: Gravensteen, Graslei, Korenlei",
+        "details": "Gravensteen (Castle of the Counts) dates to 1180 and offers panoramic views. Graslei and Korenlei are the iconic medieval guild-house quays along the Leie river — the heart of Ghent.",
+        "link": "https://visit.gent.be",
+        "go4cycling": false
+      },
+      {
+        "time": "12:30",
+        "icon": "🍽️",
+        "description": "Lunch in Ghent",
+        "details": "The Patershol neighbourhood is Ghent's culinary heartland. Try Pakhuis (brasserie in a former warehouse) or Het Pand for a casual waterside lunch.",
+        "link": null,
+        "go4cycling": false
+      },
+      {
+        "time": "14:30",
+        "icon": "🍺",
+        "description": "Beer tasting at a local brewery",
+        "details": "Gruut Gentse Stadsbrouwerij brews unique herb-based beers and offers guided tastings in the city centre. Book in advance. Alternatively, Stadsbrouwerij De Struise is nearby.",
+        "link": "https://www.gruut.be",
+        "go4cycling": false
+      },
+      {
+        "time": "17:30",
+        "icon": "🚆",
+        "description": "Return to Kortrijk (~30 minutes)",
+        "details": "IC trains back to Kortrijk depart Ghent-Sint-Pieters approximately every 30 min throughout the evening.",
+        "link": "https://www.belgiantrain.be",
+        "go4cycling": false
+      },
+      {
+        "time": "19:00",
+        "icon": "🍷",
+        "description": "Dinner and socializing in Kortrijk",
+        "details": "Relaxed evening in Kortrijk ahead of the early race-day start. The Broelkaai area along the Leie river has several bars and restaurants with outdoor terraces.",
+        "link": null,
+        "go4cycling": false
+      }
+    ]
+  },
+  {
+    "title": "Sunday, April 11 – Paris-Roubaix 🏆",
+    "activities": [
+      {
+        "time": "05:00",
+        "icon": "☕",
+        "description": "Early wake-up and breakfast",
+        "details": "Check whether the hotel offers an early breakfast service — arrange this in advance. Alternatively, pastries and coffee are served on the Go4Cycling bus.",
+        "link": null,
+        "go4cycling": false
+      },
+      {
+        "time": "06:00",
+        "icon": "🚍",
+        "description": "Meeting point in Kortrijk – Go4Cycling VIP bus",
+        "details": "Confirm the exact pick-up point with Go4Cycling before the trip. Have your booking confirmation ready.",
+        "link": "https://www.go4cycling.be",
+        "go4cycling": true
+      },
+      {
+        "time": "06:15",
+        "icon": "🚌",
+        "description": "Transfer Kortrijk → Compiègne (~2h) with coffee, tea & pastries",
+        "details": "~250 km by coach. Compiègne is the traditional start city of Paris-Roubaix since 1977. Pastries and hot drinks served on board.",
+        "link": null,
+        "go4cycling": true
+      },
+      {
+        "time": "08:30",
+        "icon": "🚴‍♂️",
+        "description": "Start area in Compiègne – experience team buses and preparations",
+        "details": "WorldTour team buses line the start route through the city centre. Riders do sign-on at the podium. A unique chance to get close to the pros before the flag drops.",
+        "link": null,
+        "go4cycling": true
+      },
+      {
+        "time": "09:55",
+        "icon": "🚍",
+        "description": "Return to bus",
+        "details": "Meet back at the agreed bus location promptly — the bus departs before the race start to position at the first viewing point.",
+        "link": null,
+        "go4cycling": true
+      },
+      {
+        "time": "10:05",
+        "icon": "🏁",
+        "description": "Bus departs – race starts at 10:15",
+        "details": "The peloton is neutralised through Compiègne city before the race goes live. The bus heads to the first strategic road-side position.",
+        "link": null,
+        "go4cycling": true
+      },
+      {
+        "time": "10:05",
+        "icon": "🌍",
+        "description": "Follow the race from key positions along the route",
+        "details": "Go4Cycling plans multiple roadside stops along the course, including iconic cobbled sectors. Exact locations confirmed closer to race day.",
+        "link": "https://www.paris-roubaix.fr",
+        "go4cycling": true
+      },
+      {
+        "time": "12:00",
+        "icon": "🍾",
+        "description": "Lunch break with packed meal & CAVA on board",
+        "details": "Lunch is served while the bus repositions between sectors. CAVA and soft drinks included.",
+        "link": null,
+        "go4cycling": true
+      },
+      {
+        "time": "12:30",
+        "icon": "🎬",
+        "description": "Live experience at multiple strategic points",
+        "details": "Key sectors to watch for: Trouée d'Arenberg (km 162, ★★★★★), Mons-en-Pévèle (km 200, ★★★★), Carrefour de l'Arbre (km 238, ★★★★★). Cobblestones are rough — wear comfortable shoes.",
+        "link": null,
+        "go4cycling": true
+      },
+      {
+        "time": "16:30",
+        "icon": "🏟️",
+        "description": "Arrival at Roubaix Velodrome – finish line!",
+        "details": "The Vélodrome André Pétrieux dates to 1936 and holds ~8,000 spectators for the finish. VIP access included. The winner's shower in the famous communal showers is a tradition.",
+        "link": "https://www.paris-roubaix.fr",
+        "go4cycling": true
+      },
+      {
+        "time": "17:15",
+        "icon": "🚍",
+        "description": "Return to Kortrijk",
+        "details": "~1h drive from Roubaix Velodrome back to Kortrijk. Roubaix is just across the Belgian border.",
+        "link": null,
+        "go4cycling": true
+      },
+      {
+        "time": "19:00",
+        "icon": "🍷",
+        "description": "Dinner and reliving the day's events in Kortrijk",
+        "details": "Celebrate at a restaurant in Kortrijk. Consider booking in advance — the area sees race-day crowds on Paris-Roubaix Sunday.",
+        "link": null,
+        "go4cycling": false
+      }
+    ]
+  },
+  {
+    "title": "Monday, April 12 – Departure",
+    "activities": [
+      {
+        "time": "09:00",
+        "icon": "☕",
+        "description": "Breakfast and hotel check-out",
+        "details": "Standard checkout is 12:00 noon, but confirm with the hotel. Luggage storage is usually available if you want to explore Kortrijk in the morning before heading to the airport.",
+        "link": null,
+        "go4cycling": false
+      },
+      {
+        "time": "13:00",
+        "icon": "🚌",
+        "description": "Transfer Kortrijk → Brussels Airport (~1.5 hours by coach/taxi)",
+        "details": "Brussels Airport (BRU) is ~75 km from Kortrijk, typically 1h–1h20 by car depending on traffic. Book a taxi or private transfer the day before.",
+        "link": null,
+        "go4cycling": false
+      },
+      {
+        "time": "14:30",
+        "icon": "🛫",
+        "description": "Arrive Brussels Airport (BRU) · check in for departure",
+        "details": "Check-in desks close 45 min before departure. Security is typically 20–30 min. SAS desks are in Terminal 1 (Schengen departures).",
+        "link": "https://www.brusselsairport.be",
+        "go4cycling": false
+      },
+      {
+        "time": "15:10",
+        "icon": "✈️",
+        "description": "SAS flight SK1594: Brussels (BRU) 15:10 → Copenhagen (CPH) 16:40",
+        "details": "Daily nonstop, ~1h30. Arrives CPH Terminal 3. Based on current SAS timetable — verify at flysas.com once the 2027 schedule is published.",
+        "link": "https://www.flysas.com",
+        "go4cycling": false
+      }
+    ]
+  }
+]
