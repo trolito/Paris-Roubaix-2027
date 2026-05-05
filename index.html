@@ -377,6 +377,77 @@
         .activity-item.g4c .act-link { color: var(--gold); border-color: rgba(245,197,24,0.35); }
         .activity-item.g4c .act-link:hover { background: var(--gold); color: #1a1a00; }
 
+        /* ── ESTIMATED COST ── */
+        .cost-card {
+            background: var(--surface);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .cost-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 24px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .cost-row:last-child { border-bottom: none; }
+        .cost-icon {
+            font-size: 1.15rem;
+            min-width: 26px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .cost-label {
+            flex: 1;
+            color: #ddd;
+            font-size: 0.92rem;
+            line-height: 1.4;
+        }
+        .cost-label small {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            font-weight: 400;
+            margin-top: 2px;
+        }
+        .cost-amount {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+        .cost-row.g4c {
+            background: linear-gradient(90deg, rgba(245,197,24,0.07), transparent);
+            border-left: 3px solid var(--gold);
+        }
+        .cost-row.total {
+            background: linear-gradient(90deg, rgba(227,30,36,0.12), transparent);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 18px 24px;
+        }
+        .cost-row.total .cost-label {
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.85rem;
+        }
+        .cost-row.total .cost-amount {
+            color: var(--red);
+            font-size: 1.1rem;
+        }
+        .cost-note {
+            padding: 12px 24px 16px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
         /* ── FOOTER ── */
         footer {
             text-align: center;
@@ -393,7 +464,7 @@
 <div class="hero">
     <div class="hero-tag">April 9–12, 2027</div>
     <h1>Paris<em>-</em>Roubaix</h1>
-    <p class="hero-sub">🍺 SPRING TRIP 🍺</p>
+    <p class="hero-sub">🇧🇪 SPRING TRIP 🇫🇷</p>
     <div class="hero-badges">
         <span class="badge"><span class="dot"></span>3 Nights in Belgium</span>
         <span class="badge"><span class="dot"></span>Race Day VIP Bus Experience</span>
@@ -407,7 +478,7 @@
     <!-- MAPS SECTION -->
     <div class="section-header">
         <div class="sh-icon">🗺️</div>
-        <h2>Routes</h2>
+        <h2>Route</h2>
         <div class="sh-line"></div>
     </div>
 
@@ -642,6 +713,57 @@
     </div>
 
     <div class="itinerary" id="itinerary"></div>
+
+    <!-- ESTIMATED COST SECTION -->
+    <div class="section-header">
+        <div class="sh-icon">💶</div>
+        <h2>Estimated Cost</h2>
+        <div class="sh-line"></div>
+    </div>
+
+    <div class="cost-card">
+        <div class="cost-row">
+            <span class="cost-icon">✈️</span>
+            <span class="cost-label">Flights CPH ↔ BRU (return)<small>SAS or similar, economy</small></span>
+            <span class="cost-amount">€200–400</span>
+        </div>
+        <div class="cost-row">
+            <span class="cost-icon">🏨</span>
+            <span class="cost-label">Hotel — 3 nights in Kortrijk<small>per person, double occupancy at Pullman / Park Inn / NH</small></span>
+            <span class="cost-amount">€180–300</span>
+        </div>
+        <div class="cost-row g4c">
+            <span class="cost-icon">🚍</span>
+            <span class="cost-label">Go4Cycling VIP race-day bus<small>coach, breakfast, lunch + CAVA, multiple roadside stops, Vélodrome VIP access</small></span>
+            <span class="cost-amount">€350–500</span>
+        </div>
+        <div class="cost-row">
+            <span class="cost-icon">🚖</span>
+            <span class="cost-label">Airport transfers BRU ↔ Kortrijk<small>both ways — taxi (~€80–100 each) or train (~€20 each)</small></span>
+            <span class="cost-amount">€40–200</span>
+        </div>
+        <div class="cost-row">
+            <span class="cost-icon">🚆</span>
+            <span class="cost-label">Trains Kortrijk ↔ Ghent (return)<small>NMBS Intercity, no reservation</small></span>
+            <span class="cost-amount">€10–15</span>
+        </div>
+        <div class="cost-row">
+            <span class="cost-icon">🍽️</span>
+            <span class="cost-label">Food & drinks — 4 days<small>breakfasts, 2 lunches, 4 dinners, beers along the way</small></span>
+            <span class="cost-amount">€300–500</span>
+        </div>
+        <div class="cost-row">
+            <span class="cost-icon">🏛️</span>
+            <span class="cost-label">Sightseeing & brewery tasting<small>Gravensteen, Gruut tasting, incidentals</small></span>
+            <span class="cost-amount">€40–70</span>
+        </div>
+        <div class="cost-row total">
+            <span class="cost-icon">💰</span>
+            <span class="cost-label">Approximate total per person</span>
+            <span class="cost-amount">€1 120–1 985</span>
+        </div>
+        <p class="cost-note">All figures in EUR per person and indicative only — actual prices depend on flight timing, hotel choice and Go4Cycling 2027 package rates. Hotel assumes a shared double room.</p>
+    </div>
 
 </div>
 
