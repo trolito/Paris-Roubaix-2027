@@ -273,42 +273,109 @@
 
         .activity-list { padding: 4px 24px 20px; }
         .activity-item {
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .activity-item:last-child { border-bottom: none; }
+
+        .act-main {
             display: flex;
             align-items: flex-start;
             gap: 16px;
             padding: 12px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            cursor: default;
         }
-        .activity-item:last-child { border-bottom: none; }
+        .activity-item.expandable .act-main { cursor: pointer; }
+        .activity-item.expandable .act-main:hover .act-desc { color: #eee; }
+
         .act-time {
             font-size: 0.8rem;
             font-weight: 700;
             color: var(--red);
             min-width: 52px;
-            padding-top: 2px;
+            padding-top: 3px;
             letter-spacing: 0.03em;
+            flex-shrink: 0;
         }
         .act-icon {
             font-size: 1.15rem;
             min-width: 26px;
             text-align: center;
+            flex-shrink: 0;
         }
         .act-desc {
             font-size: 0.92rem;
             color: #ccc;
             line-height: 1.5;
             flex: 1;
+            transition: color 0.15s;
         }
+        .act-expand-btn {
+            flex-shrink: 0;
+            width: 22px; height: 22px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.07);
+            border: none;
+            color: var(--text-muted);
+            font-size: 0.6rem;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.2s, color 0.2s;
+            margin-top: 2px;
+        }
+        .activity-item.open .act-expand-btn {
+            transform: rotate(90deg);
+            background: var(--red);
+            color: #fff;
+        }
+
+        .act-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), padding 0.25s;
+            padding: 0 0 0 94px;
+        }
+        .activity-item.open .act-details {
+            max-height: 200px;
+            padding: 0 0 12px 94px;
+        }
+        .act-details p {
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+            margin-bottom: 8px;
+        }
+        .act-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--red);
+            text-decoration: none;
+            border: 1px solid rgba(227,30,36,0.35);
+            border-radius: 20px;
+            padding: 3px 10px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .act-link:hover { background: var(--red); color: #fff; }
+
         .activity-item.g4c {
             background: linear-gradient(90deg, rgba(245,197,24,0.07), transparent);
             border-radius: 8px;
-            padding: 10px 12px;
+            padding: 0 12px;
             margin: 2px -12px;
             border-bottom: none;
             border-left: 3px solid var(--gold);
         }
+        .activity-item.g4c .act-main { padding: 10px 0; }
         .activity-item.g4c .act-time { color: var(--gold); }
         .activity-item.g4c .act-desc { color: #e8d88a; }
+        .activity-item.g4c .act-expand-btn { background: rgba(245,197,24,0.12); color: #a89030; }
+        .activity-item.g4c.open .act-expand-btn { background: var(--gold); color: #1a1a00; }
+        .activity-item.g4c .act-details { padding-left: 106px; }
+        .activity-item.g4c.open .act-details { padding-bottom: 10px; }
+        .activity-item.g4c .act-link { color: var(--gold); border-color: rgba(245,197,24,0.35); }
+        .activity-item.g4c .act-link:hover { background: var(--gold); color: #1a1a00; }
 
         /* ── FOOTER ── */
         footer {
@@ -326,7 +393,7 @@
 <div class="hero">
     <div class="hero-tag">April 9–12, 2027</div>
     <h1>Paris<em>-</em>Roubaix</h1>
-    <p class="hero-sub">Kortrijk &amp; Ghent, Belgium &nbsp;·&nbsp; Cycling's Toughest Classic</p>
+    <p class="hero-sub">Kortrijk, Belgium &nbsp;·&nbsp; Cycling's Toughest Classic</p>
     <div class="hero-badges">
         <span class="badge"><span class="dot"></span>257 km of suffering</span>
         <span class="badge"><span class="dot"></span>Go4Cycling VIP Experience</span>
@@ -664,13 +731,45 @@
     <p>Vive <strong>Paris-Roubaix</strong> &nbsp;·&nbsp; L'Enfer du Nord &nbsp;·&nbsp; April 2027 🇫🇷🚴</p>
 </footer>
 
-<script src="schedule.js"></script>
 <script>
     const dayNumbers = ['09', '10', '11', '12'];
-    const dayColors = ['#4a7cc7','#4a7cc7','#e31e24','#4a7cc7'];
-    const daySubtitles = ['Friday — April 9','Saturday — April 10','Sunday — April 11','Monday — April 12'];
+    const dayColors  = ['#4a7cc7', '#4a7cc7', '#e31e24', '#4a7cc7'];
+    const daySubtitles = ['Friday — April 9', 'Saturday — April 10', 'Sunday — April 11', 'Monday — April 12'];
 
-    function renderItinerary() {
+    function buildActivity(a) {
+        const hasDetails = a.details && a.details.trim();
+        const item = document.createElement('div');
+        item.className = 'activity-item' + (a.go4cycling ? ' g4c' : '') + (hasDetails ? ' expandable' : '');
+
+        const mainRow = document.createElement('div');
+        mainRow.className = 'act-main';
+        mainRow.innerHTML =
+            `<span class="act-time">${a.time}</span>` +
+            `<span class="act-icon">${a.icon}</span>` +
+            `<span class="act-desc">${a.description}</span>`;
+
+        if (hasDetails) {
+            const btn = document.createElement('button');
+            btn.className = 'act-expand-btn';
+            btn.setAttribute('aria-label', 'Show details');
+            btn.textContent = '▶';
+            mainRow.appendChild(btn);
+
+            const details = document.createElement('div');
+            details.className = 'act-details';
+            details.innerHTML = `<p>${a.details}</p>` +
+                (a.link ? `<a class="act-link" href="${a.link}" target="_blank" rel="noopener">Visit ↗</a>` : '');
+
+            mainRow.addEventListener('click', () => item.classList.toggle('open'));
+            item.appendChild(mainRow);
+            item.appendChild(details);
+        } else {
+            item.appendChild(mainRow);
+        }
+        return item;
+    }
+
+    function renderItinerary(schedule) {
         const container = document.getElementById('itinerary');
         container.innerHTML = '';
         schedule.forEach((day, i) => {
@@ -680,29 +779,33 @@
             const titleParts = day.title.split('–');
             const dayLabel = titleParts[1] ? titleParts[1].trim() : day.title;
 
-            card.innerHTML = `
-                <div class="day-header" onclick="this.closest('.day-card').classList.toggle('active')">
-                    <div class="day-number" style="color:${dayColors[i]}">${dayNumbers[i]}</div>
-                    <div class="day-info">
-                        <strong>${dayLabel}</strong>
-                        <span>${daySubtitles[i]}</span>
-                    </div>
-                    <div class="day-toggle">▼</div>
-                </div>
-                <div class="day-body">
-                    <div class="activity-list">${day.activities.map(a => `
-                        <div class="activity-item${a.go4cycling ? ' g4c' : ''}">
-                            <span class="act-time">${a.time}</span>
-                            <span class="act-icon">${a.icon}</span>
-                            <span class="act-desc">${a.description}</span>
-                        </div>`).join('')}
-                    </div>
-                </div>`;
+            const header = document.createElement('div');
+            header.className = 'day-header';
+            header.innerHTML =
+                `<div class="day-number" style="color:${dayColors[i]}">${dayNumbers[i]}</div>` +
+                `<div class="day-info"><strong>${dayLabel}</strong><span>${daySubtitles[i]}</span></div>` +
+                `<div class="day-toggle">▼</div>`;
+            header.addEventListener('click', () => card.classList.toggle('active'));
+
+            const body = document.createElement('div');
+            body.className = 'day-body';
+            const list = document.createElement('div');
+            list.className = 'activity-list';
+            day.activities.forEach(a => list.appendChild(buildActivity(a)));
+            body.appendChild(list);
+
+            card.appendChild(header);
+            card.appendChild(body);
             container.appendChild(card);
         });
     }
 
-    document.addEventListener('DOMContentLoaded', renderItinerary);
+    fetch('schedule.json')
+        .then(r => r.json())
+        .then(renderItinerary)
+        .catch(err => {
+            document.getElementById('itinerary').textContent = 'Could not load schedule. ' + err;
+        });
 </script>
 </body>
 </html>
