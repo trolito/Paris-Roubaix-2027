@@ -5,7 +5,7 @@
       {
         "time": "12:55",
         "icon": "✈️",
-        "description": "Depart Copenhagen (CPH) → Brussels (BRU) — Flight TBD",
+        "description": "Depart Copenhagen (CPH) → Brussels (BRU) — Flight <span class=\"tbd-badge\">TBD</span>",
         "details": "Flight to be confirmed. ~1h35 nonstop. Suggested departure window ~12:30–13:30 to arrive BRU by ~14:30. Check flysas.com or other carriers once the 2027 schedule is published.",
         "link": null,
         "go4cycling": false
@@ -22,14 +22,14 @@
         "time": "15:00",
         "icon": "🚌",
         "description": "Transfer Brussels Airport → Kortrijk (~1.5 hours by coach/taxi)",
-        "details": "By taxi/private transfer: ~€80–100, ~1h15. By train: Brussels-Airport-Zaventem → Brussels-Midi → Kortrijk (IC, ~1h45 total with connection). Book private transfer in advance for convenience.",
+        "details": "By taxi/private transfer: ~DKK 600–745, ~1h15. By train: Brussels-Airport-Zaventem → Brussels-Midi → Kortrijk (IC, ~1h45 total with connection). Book private transfer in advance for convenience.",
         "link": null,
         "go4cycling": false
       },
       {
         "time": "16:30",
         "icon": "🏨",
-        "description": "Check-in at hotel in Kortrijk (TBD)",
+        "description": "Check-in at hotel in Kortrijk <span class=\"tbd-badge\">TBD</span>",
         "details": "Hotel to be confirmed. Central options: Pullman Kortrijk, Park Inn by Radisson Kortrijk, or NH Kortrijk — all within walking distance of the Grote Markt.",
         "link": null,
         "go4cycling": false
@@ -51,7 +51,7 @@
         "time": "09:00",
         "icon": "🚆",
         "description": "Train or coach from Kortrijk to Ghent (~30 minutes)",
-        "details": "NMBS Intercity trains run every 30 min between Kortrijk and Ghent-Sint-Pieters. A return ticket is ~€10–15 pp. No reservation needed.",
+        "details": "NMBS Intercity trains run every 30 min between Kortrijk and Ghent-Sint-Pieters. A return ticket is ~DKK 75–110 pp. No reservation needed.",
         "link": "https://www.belgiantrain.be",
         "go4cycling": false
       },
@@ -228,7 +228,7 @@
       {
         "time": "15:10",
         "icon": "✈️",
-        "description": "Brussels (BRU) → Copenhagen (CPH) — Flight TBD",
+        "description": "Brussels (BRU) → Copenhagen (CPH) — Flight <span class=\"tbd-badge\">TBD</span>",
         "details": "Flight to be confirmed. ~1h30 nonstop. Suggested departure window ~15:00–16:00 to arrive CPH by ~17:00. Verify at flysas.com or other carriers once the 2027 schedule is published.",
         "link": null,
         "go4cycling": false
