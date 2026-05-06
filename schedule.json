@@ -38,7 +38,7 @@
         "time": "16:00",
         "icon": "🍺",
         "description": "Velkomstøl i Kortrijk",
-        "details": "Kom ned i tempo med en første runde på en terrasse i Kortrijk. Grote Markt og Broelkaai (langs floden Leie) har masser af muligheder for en afslappet eftermiddagsøl.",
+        "details": "Første runde på en terrasse i Kortrijk. Grote Markt og Broelkaai (langs floden Leie) har masser af muligheder for en afslappet ølbajer.",
         "link": null,
         "go4cycling": false
       },
@@ -53,7 +53,7 @@
     ]
   },
   {
-    "title": "Lørdag 10. april – Tur til Gent",
+    "title": "Lørdag 10. april – Dagstur til Gent",
     "activities": [
       {
         "time": "09:00",
@@ -119,8 +119,8 @@
       {
         "time": "05:00",
         "icon": "☕",
-        "description": "Tidlig vækning og morgenmad",
-        "details": "Tjek om hotellet tilbyder tidlig morgenmadsservering — aftal det i forvejen. Alternativt serveres bagværk og kaffe på Go4Cycling-bussen.",
+        "description": "Tidligt op!",
+        "details": "Tjek evt. om hotellet tilbyder tidlig morgenmadsservering. Alternativt serveres bagværk og kaffe på VIP-bussen.",
         "link": null,
         "go4cycling": false
       },
@@ -128,7 +128,7 @@
         "time": "06:00",
         "icon": "🚍",
         "description": "Mødested i Kortrijk – Go4Cycling VIP-bus",
-        "details": "Bekræft det præcise afhentningssted med Go4Cycling før turen. Hav din bookingbekræftelse klar.",
+        "details": "Bekræft det præcise afhentningssted med Go4Cycling før turen. Hav bookingbekræftelse klar.",
         "link": "https://www.go4cycling.be",
         "go4cycling": true
       },
@@ -199,8 +199,8 @@
       {
         "time": "19:00",
         "icon": "🍷",
-        "description": "Aftensmad og drinks — genoplev dagens vanvid",
-        "details": "Fejr på en restaurant i Kortrijk. Overvej at booke i forvejen — området er fyldt med løbsdagsfolk på Paris-Roubaix-søndagen.",
+        "description": "Aftensmad og drinks",
+        "details": "Afslut dagen på en restaurant i Kortrijk. Overvej at booke i forvejen — området er fyldt med løbsdagsfolk på Paris-Roubaix-søndagen.",
         "link": null,
         "go4cycling": false
       }
