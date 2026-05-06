@@ -128,7 +128,7 @@
         "time": "06:00",
         "icon": "🚍",
         "description": "Mødested i Kortrijk – Go4Cycling VIP-bus",
-        "details": "Bekræft det præcise afhentningssted med Go4Cycling før turen. Hav bookingbekræftelse klar.",
+        "details": "Det præcise afhentningssted kommunikeres op til turen. Hav bookingbekræftelse klar.",
         "link": "https://www.go4cycling.com/product/paris-roubaix-vip-bus-with-live-tv",
         "go4cycling": true
       },
@@ -144,7 +144,7 @@
         "time": "08:30",
         "icon": "🚴‍♂️",
         "description": "Startområde i Compiègne – oplev holdbusser og forberedelser",
-        "details": "WorldTour-holdenes busser fylder startruten gennem byens centrum. Rytterne foretager sign-on på podiet. En unik chance for at komme tæt på prof'erne, før flaget falder.",
+        "details": "WorldTour-holdenes busser fylder startområdet i byens centrum. Rytterne indskriver sig på podiet. En unik chance for at komme tæt på, før starten går.",
         "link": null,
         "go4cycling": true
       },
@@ -152,23 +152,23 @@
         "time": "09:55",
         "icon": "🚍",
         "description": "Tilbage til bussen",
-        "details": "Mød tilbage på det aftalte sted prompte — bussen kører før løbet starter for at komme på det første kig-punkt.",
+        "details": "Mød tilbage på det aftalte sted (punktligt) — bussen kører før løbet starter for at komme på plads ved det første tilskuer-stop.",
         "link": null,
         "go4cycling": true
       },
       {
         "time": "10:05",
         "icon": "🏁",
-        "description": "Bussen kører — løbet starter kl. 10:15, følg fra centrale positioner langs ruten",
-        "details": "Pelotonen er neutraliseret gennem Compiègne by, før løbet går live. Bussen kører til den første strategiske kantposition. Go4Cycling planlægger flere stop langs ruten, herunder ikoniske brostensafsnit — præcise positioner bekræftes tæt på løbsdagen.",
+        "description": "Bussen kører — løbet starter kl. 10:15 og vi følger det fra centrale positioner langs ruten",
+        "details": "Pelotonen er neutraliseret gennem Compiègne by, før løbet går live. Bussen kører til den første strategiske position. Go4Cycling planlægger flere stop langs ruten, herunder ikoniske brostensafsnit — præcise positioner bekræftes tæt på løbsdagen.",
         "link": "https://www.paris-roubaix.fr",
         "go4cycling": true
       },
       {
         "time": "12:00",
         "icon": "🍾",
-        "description": "Frokostpause med pakket måltid og CAVA ombord",
-        "details": "Frokost serveres, mens bussen kører mellem afsnit. CAVA og sodavand er inkluderet.",
+        "description": "Frokostpause med madpakker og Cava ombord",
+        "details": "Frokost serveres, mens bussen kører mellem afsnit. Cava og sodavand er inkluderet.",
         "link": null,
         "go4cycling": true
       },
@@ -176,15 +176,15 @@
         "time": "12:30",
         "icon": "🎬",
         "description": "Live-oplevelse på flere strategiske punkter",
-        "details": "Centrale afsnit at holde øje med: Trouée d'Arenberg (km 162, ★★★★★), Mons-en-Pévèle (km 200, ★★★★), Carrefour de l'Arbre (km 238, ★★★★★). Brostenene er hårde — bær komfortable sko.",
+        "details": "Centrale afsnit at holde øje med: Trouée d'Arenberg (km 162, ★★★★★), Mons-en-Pévèle (km 200, ★★★★), Carrefour de l'Arbre (km 238, ★★★★★). Brosten og mudder — bær komfortable sko.",
         "link": null,
         "go4cycling": true
       },
       {
         "time": "16:30",
         "icon": "🏟️",
-        "description": "Ankomst til Roubaix Velodromen — målstreg!",
-        "details": "Vélodrome André Pétrieux går tilbage til 1936 og rummer ~8.000 tilskuere ved målet. VIP-adgang inkluderet. Vinderens bad i de berømte fælles brusere er en tradition.",
+        "description": "Ankomst til Roubaix Velodromen — målstregen!",
+        "details": "Vélodrome André Pétrieux stammer tilbage fra 1936 og rummer ~8.000 tilskuere. Heriblandt os, VIP-adgang er inkluderet. Vinderens bad i de berømte fælles brusere er en tradition.",
         "link": "https://www.paris-roubaix.fr",
         "go4cycling": true
       },
@@ -192,7 +192,7 @@
         "time": "17:15",
         "icon": "🚍",
         "description": "Retur til Kortrijk",
-        "details": "~1t kørsel fra Roubaix Velodromen tilbage til Kortrijk. Roubaix ligger lige over den belgiske grænse.",
+        "details": "~1t kørsel fra velodromen tilbage til Kortrijk. Roubaix ligger tæt ved den belgiske grænse.",
         "link": null,
         "go4cycling": true
       },
@@ -200,7 +200,7 @@
         "time": "19:00",
         "icon": "🍷",
         "description": "Aftensmad og drinks",
-        "details": "Afslut dagen på en restaurant i Kortrijk. Overvej at booke i forvejen — området er fyldt med løbsdagsfolk på Paris-Roubaix-søndagen.",
+        "details": "Vi afslutter dagen på en restaurant i Kortrijk. Vi skal nok booke i forvejen — området er fyldt med cykelfolk på Paris-Roubaix-søndagen.",
         "link": null,
         "go4cycling": false
       }
