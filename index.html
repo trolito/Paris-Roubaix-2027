@@ -115,6 +115,29 @@
             border-radius: 50%;
             background: var(--red);
         }
+        .badge.badge-list {
+            align-items: flex-start;
+            padding: 10px 18px 12px 14px;
+        }
+        .badge.badge-list .dot {
+            margin-top: 7px;
+            flex-shrink: 0;
+        }
+        .badge-list-content {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            text-align: left;
+        }
+        .badge-list-content ul {
+            margin: 2px 0 0;
+            padding-left: 16px;
+            list-style: disc;
+            font-weight: 500;
+        }
+        .badge-list-content li {
+            line-height: 1.45;
+        }
 
         /* ── UPDATED STAMP ── */
         .updated-stamp {
@@ -500,14 +523,24 @@
 <body>
 
 <div class="hero">
-    <span class="updated-stamp">Opdateret 6. maj kl. 13:02</span>
+    <span class="updated-stamp">Opdateret 6. maj kl. 19:11</span>
     <div class="hero-tag">9.–12. april 2027</div>
     <h1>Paris<em>-</em>Roubaix</h1>
     <p class="hero-sub">🇧🇪🍺 FORÅRSTUR 🍺🇫🇷</p>
     <div class="hero-badges">
         <span class="badge"><span class="dot"></span>3 overnatninger i Belgien</span>
         <span class="badge"><span class="dot"></span>VIP-bus under cykelløbet</span>
-        <span class="badge"><span class="dot"></span>Plads på velodromen i Roubaix</span>
+        <span class="badge badge-list">
+            <span class="dot"></span>
+            <span class="badge-list-content">
+                VIP-bus til:
+                <ul>
+                    <li>Starten i Compiègne</li>
+                    <li>Udvalgte pavésektorer</li>
+                    <li>Mål på velodromen i Roubaix</li>
+                </ul>
+            </span>
+        </span>
     </div>
 </div>
 
