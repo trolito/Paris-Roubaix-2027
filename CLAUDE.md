@@ -22,18 +22,20 @@ refresh that fallback text too with
 ## Poll ("Hvem er med?")
 
 The bottom of the page hosts a shared poll where each of the 8 named
-guys can pick `in` / `undecided` / `out`. The state is stored in a
-single JSON blob on **jsonblob.com** (no auth, no API key) and the
-blob ID is kept in the URL hash (`#poll=<id>`) plus `localStorage`
-(`paris-roubaix-2027:poll-blob-id`) — the URL hash is the source of
-truth so the link can be shared.
+guys can pick `in` / `undecided` / `out`. The state is stored as a
+single record in a **public jsonbin.io bin** — the bin ID and an
+"Update Bin"-only access key are hard-coded as `POLL_BIN_ID` and
+`POLL_KEY` near the bottom of the inline `<script>` in `index.html`.
+Reads are anonymous (public bin, `GET /v3/b/<id>/latest` with
+`X-Bin-Meta: false`); writes send `X-Access-Key: <POLL_KEY>` on
+`PUT /v3/b/<id>`. The key is intentionally write-only-on-this-bin,
+so a leak just lets someone overwrite the votes — `git restore` from
+history fixes that.
 
-If neither the URL hash nor `localStorage` has an ID, the page
-silently `POST`s a fresh blob and pins the new ID into the URL +
-`localStorage`. The first visitor effectively bootstraps the poll;
-everyone else should open the URL **with** the `#poll=…` hash so they
-land on the same blob (otherwise they'd create an orphan).
+Earlier versions used jsonblob.com with the bin ID in the URL hash;
+that was abandoned because jsonblob host-allowlists requests and
+returned `403 host_not_allowed` to `trolito.github.io`.
 
-Names, states, and the API base are defined as `POLL_NAMES`,
-`POLL_STATES`, and `POLL_API` near the bottom of the inline `<script>`
-in `index.html`.
+Names, states, and bin config live as `POLL_NAMES`, `POLL_STATES`,
+`POLL_BIN_ID`, `POLL_KEY`, and `POLL_BIN_URL` near the bottom of the
+inline `<script>` in `index.html`.
