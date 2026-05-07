@@ -97,15 +97,16 @@
             margin-top: 22px;
             flex-wrap: wrap;
             justify-content: center;
+            align-items: stretch;
         }
         .badge {
             display: flex;
             align-items: center;
-            gap: 7px;
+            gap: 9px;
             background: rgba(255,255,255,0.07);
             border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 100px;
-            padding: 6px 16px;
+            border-radius: 16px;
+            padding: 10px 18px 12px 14px;
             font-size: 0.82rem;
             font-weight: 600;
             color: #ccc;
@@ -114,15 +115,13 @@
             width: 7px; height: 7px;
             border-radius: 50%;
             background: var(--red);
+            flex-shrink: 0;
         }
         .badge.badge-list {
             align-items: flex-start;
-            padding: 10px 18px 12px 14px;
-            border-radius: 16px;
         }
         .badge.badge-list .dot {
             margin-top: 7px;
-            flex-shrink: 0;
         }
         .badge-list-content {
             display: flex;
@@ -620,7 +619,7 @@
 <body>
 
 <div class="hero">
-    <span class="updated-stamp">Opdateret 7. maj kl. 15:08</span>
+    <span class="updated-stamp">Opdateret 7. maj kl. 15:14</span>
     <div class="hero-tag">9.–12. april 2027</div>
     <h1>Paris<em>-</em>Roubaix</h1>
     <p class="hero-sub">🇧🇪🍺 FORÅRSTUR 🍺🇫🇷</p>
@@ -1032,7 +1031,7 @@
     // so the worst a leak allows is overwriting the votes).
     const POLL_NAMES = ['Kenni', 'Trolito', 'Gert', 'Eriksen', 'Miguel', 'Volley', 'Crassus', 'Zuggi'];
     const POLL_STATES = [
-        { key: 'in',        emoji: '✅', label: 'I\'m in!' },
+        { key: 'in',        emoji: '✅', label: 'Er muss!' },
         { key: 'undecided', emoji: '🤔', label: 'Undecided' },
         { key: 'out',       emoji: '💀', label: 'I\'m gone, I\'m dead!' },
     ];
