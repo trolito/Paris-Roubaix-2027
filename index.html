@@ -603,6 +603,7 @@
             gap: 10px;
             flex-wrap: wrap;
         }
+        .poll-card > .poll-status:first-child { margin: 0 0 14px; }
         .poll-status .is-error { color: #ff8a8e; }
 
         /* ── FOOTER ── */
@@ -619,7 +620,7 @@
 <body>
 
 <div class="hero">
-    <span class="updated-stamp">Opdateret 7. maj kl. 15:14</span>
+    <span class="updated-stamp">Opdateret 7. maj kl. 19:41</span>
     <div class="hero-tag">9.–12. april 2027</div>
     <h1>Paris<em>-</em>Roubaix</h1>
     <p class="hero-sub">🇧🇪🍺 FORÅRSTUR 🍺🇫🇷</p>
@@ -934,9 +935,12 @@
     <p class="section-subtitle">Klik på din status. Den gemmes og deles med resten af holdet.</p>
 
     <div class="poll-card">
+        <div class="poll-status">
+            <span class="poll-status-text">Henter status…</span>
+        </div>
         <div class="poll-grid" id="pollGrid"></div>
         <div class="poll-status">
-            <span id="pollStatus">Henter status…</span>
+            <span class="poll-status-text">Henter status…</span>
         </div>
     </div>
 
@@ -1040,13 +1044,15 @@
     const POLL_BIN_URL = `https://api.jsonbin.io/v3/b/${POLL_BIN_ID}`;
 
     const pollGrid = document.getElementById('pollGrid');
-    const pollStatusEl = document.getElementById('pollStatus');
+    const pollStatusEls = document.querySelectorAll('.poll-status-text');
     let pollState = Object.fromEntries(POLL_NAMES.map(n => [n, 'undecided']));
     let pollWriteInFlight = false;
 
     function pollSetStatus(text, isError = false) {
-        pollStatusEl.textContent = text;
-        pollStatusEl.classList.toggle('is-error', isError);
+        pollStatusEls.forEach(el => {
+            el.textContent = text;
+            el.classList.toggle('is-error', isError);
+        });
     }
 
     function pollLabelFor(key) {
