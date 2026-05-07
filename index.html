@@ -523,7 +523,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
         }
-        @media (min-width: 640px) {
+        @media (min-width: 800px) {
             .poll-grid { grid-template-columns: repeat(4, 1fr); }
         }
         .poll-person {
@@ -560,20 +560,28 @@
         .poll-person[data-state="out"]       .poll-current { color: var(--red); }
         .poll-btn-row {
             display: flex;
-            gap: 4px;
+            flex-direction: column;
+            gap: 5px;
             margin-top: auto;
         }
         .poll-btn {
-            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 8px;
-            padding: 6px 0;
-            font-size: 1rem;
+            padding: 6px 10px;
+            font: inherit;
+            font-size: 0.82rem;
+            font-weight: 600;
             color: var(--text-muted);
+            text-align: left;
             cursor: pointer;
             transition: background 0.15s, border-color 0.15s, transform 0.1s, color 0.15s;
         }
+        .poll-btn-emoji { font-size: 1rem; line-height: 1; }
+        .poll-btn-label { line-height: 1.15; }
         .poll-btn:hover  { background: rgba(255,255,255,0.09); color: #fff; }
         .poll-btn:active { transform: scale(0.94); }
         .poll-btn.is-active[data-state="in"] {
@@ -612,7 +620,7 @@
 <body>
 
 <div class="hero">
-    <span class="updated-stamp">Opdateret 7. maj kl. 15:06</span>
+    <span class="updated-stamp">Opdateret 7. maj kl. 15:08</span>
     <div class="hero-tag">9.–12. april 2027</div>
     <h1>Paris<em>-</em>Roubaix</h1>
     <p class="hero-sub">🇧🇪🍺 FORÅRSTUR 🍺🇫🇷</p>
@@ -1072,8 +1080,14 @@
                 btn.className = 'poll-btn' + (s.key === current ? ' is-active' : '');
                 btn.dataset.state = s.key;
                 btn.title = `${name}: ${s.label}`;
-                btn.setAttribute('aria-label', `${name}: ${s.label}`);
-                btn.textContent = s.emoji;
+                const emoji = document.createElement('span');
+                emoji.className = 'poll-btn-emoji';
+                emoji.setAttribute('aria-hidden', 'true');
+                emoji.textContent = s.emoji;
+                const label = document.createElement('span');
+                label.className = 'poll-btn-label';
+                label.textContent = s.label;
+                btn.append(emoji, label);
                 btn.addEventListener('click', () => pollSetVote(name, s.key));
                 row.appendChild(btn);
             });
