@@ -510,6 +510,109 @@
             border-top: 1px solid rgba(255,255,255,0.05);
         }
 
+        /* ── POLL ── */
+        .poll-card {
+            background: var(--surface);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            padding: 18px 18px 14px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .poll-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        @media (min-width: 640px) {
+            .poll-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        .poll-person {
+            background: var(--dark2);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--text-muted);
+            border-radius: 12px;
+            padding: 12px 12px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .poll-person[data-state="in"]        { border-left-color: #2dbd5a; }
+        .poll-person[data-state="undecided"] { border-left-color: var(--gold); }
+        .poll-person[data-state="out"]       { border-left-color: var(--red); }
+        .poll-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            color: #fff;
+            line-height: 1;
+        }
+        .poll-current {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-top: -6px;
+        }
+        .poll-person[data-state="in"]        .poll-current { color: #2dbd5a; }
+        .poll-person[data-state="undecided"] .poll-current { color: var(--gold); }
+        .poll-person[data-state="out"]       .poll-current { color: var(--red); }
+        .poll-btn-row {
+            display: flex;
+            gap: 4px;
+            margin-top: auto;
+        }
+        .poll-btn {
+            flex: 1;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 8px;
+            padding: 6px 0;
+            font-size: 1rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: background 0.15s, border-color 0.15s, transform 0.1s, color 0.15s;
+        }
+        .poll-btn:hover  { background: rgba(255,255,255,0.09); color: #fff; }
+        .poll-btn:active { transform: scale(0.94); }
+        .poll-btn.is-active[data-state="in"] {
+            background: rgba(45,189,90,0.18); border-color: #2dbd5a; color: #6ee399;
+        }
+        .poll-btn.is-active[data-state="undecided"] {
+            background: rgba(245,197,24,0.18); border-color: var(--gold); color: var(--gold-light);
+        }
+        .poll-btn.is-active[data-state="out"] {
+            background: rgba(227,30,36,0.20); border-color: var(--red); color: #ff8a8e;
+        }
+        .poll-status {
+            margin-top: 14px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            min-height: 1.1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .poll-status .is-error { color: #ff8a8e; }
+        .poll-share {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: 1px solid rgba(255,255,255,0.12);
+            color: var(--text-muted);
+            font: inherit;
+            font-size: 0.75rem;
+            border-radius: 100px;
+            padding: 4px 12px;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s, border-color 0.15s;
+        }
+        .poll-share:hover { background: rgba(255,255,255,0.06); color: #fff; border-color: rgba(255,255,255,0.25); }
+
         /* ── FOOTER ── */
         footer {
             text-align: center;
@@ -524,7 +627,7 @@
 <body>
 
 <div class="hero">
-    <span class="updated-stamp">Opdateret 6. maj kl. 22:51</span>
+    <span class="updated-stamp">Opdateret 7. maj kl. 14:20</span>
     <div class="hero-tag">9.–12. april 2027</div>
     <h1>Paris<em>-</em>Roubaix</h1>
     <p class="hero-sub">🇧🇪🍺 FORÅRSTUR 🍺🇫🇷</p>
@@ -830,6 +933,22 @@
         <p class="cost-note">Alle beløb i DKK pr. person og kun vejledende og estimeret efter bedste evne. Go4Cycling VIP-buspris er fra go4cycling.com (€240 ≈ DKK 1 790). Hotellet forudsætter et delt dobbeltværelse på Hotel Damier. Mad og drikke er ikke inkluderet.</p>
     </div>
 
+    <!-- POLL SECTION -->
+    <div class="section-header">
+        <div class="sh-icon">🙋</div>
+        <h2>Hvem er med?</h2>
+        <div class="sh-line"></div>
+    </div>
+    <p class="section-subtitle">Klik på din status. Den gemmes og deles med resten af holdet.</p>
+
+    <div class="poll-card">
+        <div class="poll-grid" id="pollGrid"></div>
+        <div class="poll-status">
+            <span id="pollStatus">Henter status…</span>
+            <button type="button" class="poll-share" id="pollShare" hidden>🔗 Kopiér link</button>
+        </div>
+    </div>
+
 </div>
 
 <footer>
@@ -915,6 +1034,201 @@
     // Auto-update the "Opdateret …" stamp from GitHub's latest commit.
     // The hard-coded text in the HTML is only a fallback (if the API is
     // unreachable or rate-limited).
+    // ── POLL ───────────────────────────────────────────────────────────────
+    // Shared poll state lives in a single jsonblob.com blob (no auth needed).
+    // The blob ID is stored in the URL hash (#poll=…) so it can be shared,
+    // and cached in localStorage so return visits don't need the hash.
+    const POLL_NAMES = ['Kenni', 'Trolito', 'Gert', 'Eriksen', 'Miguel', 'Volley', 'Crassus', 'Zuggi'];
+    const POLL_STATES = [
+        { key: 'in',        emoji: '✅', label: 'I\'m in!' },
+        { key: 'undecided', emoji: '🤔', label: 'Undecided' },
+        { key: 'out',       emoji: '💀', label: 'I\'m gone, I\'m dead!' },
+    ];
+    const POLL_API = 'https://jsonblob.com/api/jsonBlob';
+    const POLL_LS_KEY = 'paris-roubaix-2027:poll-blob-id';
+
+    const pollGrid = document.getElementById('pollGrid');
+    const pollStatusEl = document.getElementById('pollStatus');
+    const pollShareBtn = document.getElementById('pollShare');
+    let pollBlobId = null;
+    let pollState = Object.fromEntries(POLL_NAMES.map(n => [n, 'undecided']));
+    let pollWriteInFlight = false;
+
+    function pollSetStatus(text, isError = false) {
+        pollStatusEl.textContent = text;
+        pollStatusEl.classList.toggle('is-error', isError);
+    }
+
+    function pollLabelFor(key) {
+        return (POLL_STATES.find(s => s.key === key) || POLL_STATES[1]).label;
+    }
+
+    function pollRenderGrid() {
+        pollGrid.innerHTML = '';
+        POLL_NAMES.forEach(name => {
+            const current = pollState[name] || 'undecided';
+            const card = document.createElement('div');
+            card.className = 'poll-person';
+            card.dataset.name = name;
+            card.dataset.state = current;
+
+            const nameEl = document.createElement('div');
+            nameEl.className = 'poll-name';
+            nameEl.textContent = name;
+            card.appendChild(nameEl);
+
+            const currentEl = document.createElement('div');
+            currentEl.className = 'poll-current';
+            currentEl.textContent = pollLabelFor(current);
+            card.appendChild(currentEl);
+
+            const row = document.createElement('div');
+            row.className = 'poll-btn-row';
+            POLL_STATES.forEach(s => {
+                const btn = document.createElement('button');
+                btn.className = 'poll-btn' + (s.key === current ? ' is-active' : '');
+                btn.dataset.state = s.key;
+                btn.title = `${name}: ${s.label}`;
+                btn.setAttribute('aria-label', `${name}: ${s.label}`);
+                btn.textContent = s.emoji;
+                btn.addEventListener('click', () => pollSetVote(name, s.key));
+                row.appendChild(btn);
+            });
+            card.appendChild(row);
+            pollGrid.appendChild(card);
+        });
+    }
+
+    function pollNormalize(raw) {
+        const out = Object.fromEntries(POLL_NAMES.map(n => [n, 'undecided']));
+        if (raw && raw.votes && typeof raw.votes === 'object') {
+            for (const name of POLL_NAMES) {
+                const v = raw.votes[name];
+                if (v === 'in' || v === 'undecided' || v === 'out') out[name] = v;
+            }
+        }
+        return out;
+    }
+
+    function pollExtractIdFromLocation(loc) {
+        if (!loc) return null;
+        const m = loc.match(/jsonBlob\/([^/?#]+)/);
+        return m ? m[1] : null;
+    }
+
+    async function pollCreateBlob() {
+        const body = { version: 1, votes: pollState };
+        const res = await fetch(POLL_API, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(body),
+        });
+        if (!res.ok) throw new Error('Kunne ikke oprette afstemning (' + res.status + ')');
+        const id = pollExtractIdFromLocation(res.headers.get('Location'))
+                || pollExtractIdFromLocation(res.headers.get('Content-Location'));
+        if (!id) throw new Error('Ingen blob-ID returneret');
+        return id;
+    }
+
+    async function pollFetch(id) {
+        const res = await fetch(`${POLL_API}/${id}`, {
+            headers: { 'Accept': 'application/json' },
+            cache: 'no-store',
+        });
+        if (!res.ok) throw new Error('Kunne ikke hente afstemning (' + res.status + ')');
+        return pollNormalize(await res.json());
+    }
+
+    async function pollPut(id, votes) {
+        const res = await fetch(`${POLL_API}/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({ version: 1, votes }),
+        });
+        if (!res.ok) throw new Error('Kunne ikke gemme afstemning (' + res.status + ')');
+    }
+
+    function pollResolveBlobId() {
+        const m = location.hash.match(/poll=([A-Za-z0-9_-]+)/);
+        if (m) return m[1];
+        try { return localStorage.getItem(POLL_LS_KEY); } catch (_) { return null; }
+    }
+
+    function pollPersistBlobId(id) {
+        try { localStorage.setItem(POLL_LS_KEY, id); } catch (_) {}
+        const newHash = `#poll=${id}`;
+        if (location.hash !== newHash) {
+            history.replaceState(null, '', location.pathname + location.search + newHash);
+        }
+    }
+
+    async function pollSetVote(name, key) {
+        if (!pollBlobId || pollWriteInFlight) return;
+        const previous = pollState[name];
+        if (previous === key) return;
+        pollWriteInFlight = true;
+        pollState = { ...pollState, [name]: key };
+        pollRenderGrid();
+        pollSetStatus('Gemmer…');
+        try {
+            await pollPut(pollBlobId, pollState);
+            pollSetStatus('Gemt ✓ — opdateres automatisk');
+        } catch (err) {
+            pollState = { ...pollState, [name]: previous };
+            pollRenderGrid();
+            pollSetStatus(err.message || 'Kunne ikke gemme', true);
+        } finally {
+            pollWriteInFlight = false;
+        }
+    }
+
+    async function pollRefresh() {
+        if (!pollBlobId || pollWriteInFlight) return;
+        try {
+            const next = await pollFetch(pollBlobId);
+            const changed = POLL_NAMES.some(n => next[n] !== pollState[n]);
+            if (changed) {
+                pollState = next;
+                pollRenderGrid();
+            }
+        } catch (_) { /* ignore transient errors during background refresh */ }
+    }
+
+    async function pollInit() {
+        pollRenderGrid();
+        let id = pollResolveBlobId();
+        try {
+            if (id) {
+                pollState = await pollFetch(id);
+            } else {
+                pollSetStatus('Opretter ny afstemning…');
+                id = await pollCreateBlob();
+            }
+            pollBlobId = id;
+            pollPersistBlobId(id);
+            pollRenderGrid();
+            pollSetStatus('Klik på en knap for at sætte din status');
+            pollShareBtn.hidden = false;
+        } catch (err) {
+            pollSetStatus(err.message || 'Kunne ikke indlæse afstemning', true);
+            return;
+        }
+        setInterval(pollRefresh, 20000);
+        window.addEventListener('focus', pollRefresh);
+    }
+    pollShareBtn.addEventListener('click', async () => {
+        const url = location.origin + location.pathname + location.search + (pollBlobId ? `#poll=${pollBlobId}` : '');
+        try {
+            await navigator.clipboard.writeText(url);
+            const original = pollShareBtn.textContent;
+            pollShareBtn.textContent = '✓ Kopieret';
+            setTimeout(() => { pollShareBtn.textContent = original; }, 1500);
+        } catch (_) {
+            window.prompt('Kopiér linket:', url);
+        }
+    });
+    pollInit();
+
     fetch('https://api.github.com/repos/trolito/Paris-Roubaix-2027/commits?per_page=1')
         .then(r => r.ok ? r.json() : Promise.reject())
         .then(commits => {
