@@ -211,13 +211,6 @@
             position: relative;
             z-index: 2;
         }
-        .race-day-banner .map-card-header {
-            justify-content: center;
-        }
-        .race-day-banner .map-card-header h3 {
-            font-size: 0.95rem;
-            letter-spacing: 0.12em;
-        }
 
         /* ── LAYOUT ── */
         .container {
@@ -276,27 +269,6 @@
             border: 1px solid var(--border);
             overflow: hidden;
             box-shadow: 0 8px 40px rgba(0,0,0,0.4);
-        }
-        .map-card-header {
-            padding: 14px 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(90deg, rgba(227,30,36,0.15), transparent);
-            border-bottom: 1px solid var(--border);
-        }
-        .map-card-header .mc-dot {
-            width: 10px; height: 10px;
-            background: var(--red);
-            border-radius: 50%;
-            box-shadow: 0 0 8px var(--red);
-        }
-        .map-card-header h3 {
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #ddd;
         }
         .map-card svg {
             width: 100%;
@@ -753,7 +725,7 @@
 <body>
 
 <div class="hero">
-    <span class="updated-stamp">Opdateret 22. juli kl. 14:16</span>
+    <span class="updated-stamp">Opdateret 22. juli kl. 14:26</span>
     <div class="hero-tag">9.–12. april 2027</div>
     <h1>Paris<em>-</em>Roubaix</h1>
     <p class="hero-sub">🇧🇪🍺 FORÅRSTUR 🍺🇫🇷</p>
@@ -778,32 +750,12 @@
 <!-- RACE DAY BANNER (replaces hero cobble strip) -->
 <div class="race-day-banner">
     <div class="map-card">
-        <div class="map-card-header">
-            <h3>·&nbsp; 🚴🚴🚴🚴🚴 &nbsp;·</h3>
-        </div>
-        <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="Foto af brostenene i Arenberg-skoven med top-afsnit fra Paris-Roubaix listet ovenpå">
-            <defs>
-                <linearGradient id="aTopShade" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%"   stop-color="rgba(0,0,0,0.78)"/>
-                    <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
-                </linearGradient>
-            </defs>
-
-            <!-- ARENBERG PHOTO -->
-            <image href="arenberg.png"
-                   xlink:href="arenberg.png"
+        <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="Foto af brostenene fra Paris-Roubaix">
+            <!-- ROAD PHOTO -->
+            <image href="road.png"
+                   xlink:href="road.png"
                    x="0" y="0" width="480" height="360"
                    preserveAspectRatio="xMidYMid slice"/>
-
-            <!-- TOP SHADE for legibility of the sector list -->
-            <rect width="480" height="100" fill="url(#aTopShade)"/>
-
-            <!-- TOP PAVÉ SECTORS -->
-            <g font-family="'Inter', sans-serif" font-weight="700" font-size="11" letter-spacing="1">
-                <text x="240" y="26" text-anchor="middle" fill="#f5c518">★★★★★  TROUÉE D'ARENBERG  ·  KM 162</text>
-                <text x="240" y="50" text-anchor="middle" fill="#f5c518">★★★★★  MONS-EN-PÉVÈLE  ·  KM 209</text>
-                <text x="240" y="74" text-anchor="middle" fill="#f5c518">★★★★★  CARREFOUR DE L'ARBRE  ·  KM 240</text>
-            </g>
         </svg>
     </div>
 </div>
