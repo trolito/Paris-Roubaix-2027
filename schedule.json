@@ -3,15 +3,15 @@
     "title": "Fredag 9. april – Ankomst",
     "activities": [
       {
-        "time": "08:30",
+        "time": "11:55",
         "icon": "✈️",
-        "description": "Afgang København (CPH) → Bruxelles (BRU) — Fly <span class=\"tbd-badge\">TBD</span>",
-        "details": "Fly skal bekræftes. ~1t35min nonstop. Sigter mod en morgenafgang (~07:00–10:00) for at lande i BRU sidst på formiddagen. Tjek flysas.com eller andre selskaber, når 2027-fartplanen er offentliggjort.",
+        "description": "Afgang København (CPH) → Bruxelles (BRU)",
+        "details": "Bekræftet afgang kl. 11:55 fra København (CPH). ~1t30min nonstop, lander i Bruxelles (BRU) kl. 13:25. Billetpris: DKK 2.098 pr. person.",
         "link": null,
         "go4cycling": false
       },
       {
-        "time": "10:05",
+        "time": "13:25",
         "icon": "🛬",
         "description": "Ankomst til Bruxelles Lufthavn (BRU)",
         "details": "Bruxelles Lufthavn (Zaventem) har én terminal. Bagageudlevering tager typisk 20–30 min efter landing for Schengen-flyvninger.",
@@ -19,7 +19,7 @@
         "go4cycling": false
       },
       {
-        "time": "10:30",
+        "time": "14:00",
         "icon": "🚌",
         "description": "Transfer Bruxelles Lufthavn → Kortrijk (~1,5 time med bus/taxa)",
         "details": "Med taxa/privat transfer: ~DKK 600–745, ~1t15min. Med tog: Brussels-Airport-Zaventem → Brussels-Midi → Kortrijk (IC, ~1t45min i alt med skift). Book privat transfer på forhånd af bekvemmelighedshensyn.",
@@ -27,15 +27,15 @@
         "go4cycling": false
       },
       {
-        "time": "12:00",
+        "time": "15:30",
         "icon": "🏨",
-        "description": "Bagageaflevering / check-in på Hotel Damier <span class=\"tbd-badge\">TBD</span>",
-        "details": "Foreslået hotel: Hotel Damier (centralt på Grote Markt i Kortrijk). NB: ~45 min gang til det forventede VIP-bus-mødested ved Decathlon, Kortrijk. Standard check-in er kl. 15:00 — hvis værelserne ikke er klar, så aflever bagagen og udforsk Kortrijk. Booking skal bekræftes.",
+        "description": "Check-in på Hotel Damier <span class=\"tbd-badge\">TBD</span>",
+        "details": "Foreslået hotel: Hotel Damier (centralt på Grote Markt i Kortrijk). NB: ~45 min gang til det forventede VIP-bus-mødested ved Decathlon, Kortrijk. Standard check-in er kl. 15:00, så værelserne bør være klar ved ankomst. Booking skal bekræftes.",
         "link": null,
         "go4cycling": false
       },
       {
-        "time": "16:00",
+        "time": "16:30",
         "icon": "🍺",
         "description": "Ankomst-øl i Kortrijk",
         "details": "Første runde på en terrasse i Kortrijk. Grote Markt og Broelkaai (langs floden Leie) har masser af muligheder for en afslappet ølbajer.",
@@ -43,7 +43,7 @@
         "go4cycling": false
       },
       {
-        "time": "18:00",
+        "time": "18:30",
         "icon": "🍽️",
         "description": "Aftensmad og drinks i Kortrijk",
         "details": "Grote Markt og de omkringliggende gader byder på et bredt udvalg af restauranter. Anbefalet: Den Hoed (belgiske klassikere) eller Brasserie Den Dyver.",
@@ -210,15 +210,31 @@
     "title": "Mandag 12. april – Hjemrejse",
     "activities": [
       {
-        "time": "08:30",
+        "time": "09:00",
         "icon": "☕",
-        "description": "Morgenmad og hotel check-out",
-        "details": "Standard udtjekning er kl. 12:00, men bekræft med hotellet. Bagageaflevering / opbevaring er som regel mulig, hvis det er nødvendigt.",
+        "description": "Morgenmad på hotellet",
+        "details": "Rolig morgen — hjemflyet går først kl. 15:45, så der er god tid. Standard udtjekning er kl. 12:00, men bekræft med hotellet. Bagageopbevaring er som regel mulig, hvis det er nødvendigt.",
         "link": null,
         "go4cycling": false
       },
       {
-        "time": "10:00",
+        "time": "10:30",
+        "icon": "🚶",
+        "description": "Sidste formiddag i Kortrijk",
+        "details": "Tid til en sidste kop kaffe, en gåtur langs Broelkaai og floden Leie eller lidt souvenirshopping på Grote Markt, inden vi skal mod lufthavnen.",
+        "link": null,
+        "go4cycling": false
+      },
+      {
+        "time": "12:00",
+        "icon": "🏨",
+        "description": "Check-out fra hotellet",
+        "details": "Aflever nøgler og saml bagagen. Sørg for at være klar til afgang mod lufthavnen, så vi når hjemflyet i god tid.",
+        "link": null,
+        "go4cycling": false
+      },
+      {
+        "time": "12:15",
         "icon": "🚌",
         "description": "Transfer Kortrijk → Bruxelles Lufthavn (~1,5 time med bus/taxa)",
         "details": "Bruxelles Lufthavn (BRU) er ~75 km fra Kortrijk, typisk 1t–1t20 min med bil afhængigt af trafikken. Book taxa eller privat transfer dagen før.",
@@ -226,18 +242,26 @@
         "go4cycling": false
       },
       {
-        "time": "11:30",
+        "time": "13:45",
         "icon": "🛫",
         "description": "Ankomst Bruxelles Lufthavn (BRU) · indtjek til hjemrejse",
-        "details": "Indtjek lukker 45 min før afgang. Sikkerhedstjek tager typisk 20–30 min. SAS' skranke er i Terminal 1 (Schengen-afgange).",
+        "details": "God tid inden afgang kl. 15:45. Indtjek lukker 45 min før afgang. Sikkerhedstjek tager typisk 20–30 min. SAS' skranke er i Terminal 1 (Schengen-afgange).",
         "link": "https://www.brusselsairport.be",
         "go4cycling": false
       },
       {
-        "time": "14:00",
+        "time": "15:45",
         "icon": "✈️",
-        "description": "Bruxelles (BRU) → København (CPH) — Fly <span class=\"tbd-badge\">TBD</span>",
-        "details": "Fly skal bekræftes. ~1t30min nonstop. Sigter mod et afgangsvindue på ~14:00–16:00 for at lande i CPH ca. 16:00–18:00. Tjek flysas.com eller andre selskaber, når 2027-fartplanen er offentliggjort.",
+        "description": "Afgang Bruxelles (BRU) → København (CPH)",
+        "details": "Bekræftet afgang kl. 15:45 fra Bruxelles (BRU). ~1t35min nonstop, lander i København (CPH) kl. 17:20. Billetpris: DKK 2.098 pr. person.",
+        "link": null,
+        "go4cycling": false
+      },
+      {
+        "time": "17:20",
+        "icon": "🛬",
+        "description": "Ankomst København (CPH)",
+        "details": "Hjemme i København kl. 17:20. Tak for turen! 🇫🇷🍺🇧🇪",
         "link": null,
         "go4cycling": false
       }
