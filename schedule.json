@@ -5,7 +5,7 @@
       {
         "time": "11:55",
         "icon": "✈️",
-        "description": "Afgang København (CPH) → Bruxelles (BRU)",
+        "description": "Afgang København (CPH) → Bruxelles (BRU) <span class=\"confirmed-badge\">CONFIRMED</span>",
         "details": "Bekræftet afgang kl. 11:55 fra København (CPH) med Brussels Airlines. ~1t30min nonstop, lander i Bruxelles (BRU) kl. 13:25. Billetpris: DKK 2.098 pr. person. Bookingreference: <strong>98EIXC</strong>.<br><br><strong>Bagage inkluderet pr. person:</strong><br>• 1× håndbagage (op til 8 kg)<br>• 1× personlig genstand (fx taske, kamerataske eller laptop)",
         "link": null,
         "go4cycling": false
@@ -14,7 +14,7 @@
         "time": "13:25",
         "icon": "🛬",
         "description": "Ankomst til Bruxelles Lufthavn (BRU)",
-        "details": "Bruxelles Lufthavn (Zaventem) har én terminal. Bagageudlevering tager typisk 20–30 min efter landing for Schengen-flyvninger.",
+        "details": "Bruxelles Lufthavn (Zaventem) har én terminal. Da vi kun rejser med håndbagage, kan vi gå direkte videre uden ophold ved bagagebåndet.",
         "link": null,
         "go4cycling": false
       },
@@ -60,7 +60,7 @@
         "icon": "🚆",
         "description": "Tog eller bus fra Kortrijk til Gent (~30 minutter)",
         "details": "NMBS Intercity-tog kører hver 30 min mellem Kortrijk og Gent-Sint-Pieters. En returbillet koster ~DKK 75–110 pr. person. Ingen pladsreservation nødvendig.",
-        "link": "https://www.belgiantrain.be",
+        "link": null,
         "go4cycling": false
       },
       {
@@ -68,7 +68,7 @@
         "icon": "🏛️",
         "description": "Sightseeing i Gent: Gravensteen, Graslei, Korenlei",
         "details": "Gravensteen (Grevernes Borg) går tilbage til 1180 og giver panoramaudsigt. Graslei og Korenlei er de ikoniske middelalderlige lavhus-kajer langs floden Leie — Gents hjerte.",
-        "link": "https://visit.gent.be",
+        "link": null,
         "go4cycling": false
       },
       {
@@ -76,14 +76,14 @@
         "icon": "🍽️",
         "description": "Frokost på Artevelde",
         "details": "Artevelde — bybryggeri og restaurant på Botermarkt 5, drevet af familiebryggeriet Huyghe. Hverdags-frokostmenu til €25 (suppe, valg mellem tre hovedretter inkl. vegetar, kaffe). Egne øl brygget på stedet, herunder Artevelde Leute (sølvmedalje ved Brussels Beer Challenge).",
-        "link": "https://artevelde.be/en/",
+        "link": null,
         "go4cycling": false
       },
       {
         "time": "14:00",
         "icon": "🍺",
         "description": "Øl i Gent — vælg en bar (eller tag på bryggerirundtur)",
-        "details": "Tre muligheder for en eftermiddagsrunde:<br><br><strong>Het Waterhuis aan de Bierkant</strong> — kanalside-ølbar på Groentenmarkt 9 med 165 øl, inkl. tre husbryg (Gandavum, Klokke Roeland, Mammelokker).<br><br><strong>Dulle Griet</strong> — gammeldags flamsk værtshus på Vrijdagmarkt 50 med 500+ øl; aflever en sko som pant for det høje Kwak-glas.<br><br><strong>Bryggerirundtur</strong> — Visit Gents bryggeriguide dækker rundvisninger hos Gruut, Dok Brewing Company (Hal 16), Stropken og flere.<br><br><a class=\"act-link\" href=\"https://visit.gent.be/en/eat-drink/waterhuis-aan-de-bierkant\" target=\"_blank\" rel=\"noopener\">Waterhuis ↗</a> <a class=\"act-link\" href=\"https://visit.gent.be/en/eat-drink/de-dulle-griet\" target=\"_blank\" rel=\"noopener\">Dulle Griet ↗</a> <a class=\"act-link\" href=\"https://visit.gent.be/en/see-do/brewery#read-more\" target=\"_blank\" rel=\"noopener\">Bryggerirundtur ↗</a>",
+        "details": "Tre muligheder for en eftermiddagsrunde:<br><br><strong>Het Waterhuis aan de Bierkant</strong> — kanalside-ølbar på Groentenmarkt 9 med 165 øl, inkl. tre husbryg (Gandavum, Klokke Roeland, Mammelokker).<br><br><strong>Dulle Griet</strong> — gammeldags flamsk værtshus på Vrijdagmarkt 50 med 500+ øl; aflever en sko som pant for det høje Kwak-glas.<br><br><strong>Bryggerirundtur</strong> — Visit Gents bryggeriguide dækker rundvisninger hos Gruut, Dok Brewing Company (Hal 16), Stropken og flere.",
         "link": null,
         "go4cycling": false
       },
@@ -92,7 +92,7 @@
         "icon": "🚆",
         "description": "Retur til Kortrijk (~30 minutter)",
         "details": "IC-tog tilbage til Kortrijk afgår fra Gent-Sint-Pieters cirka hver 30 min hele aftenen.",
-        "link": "https://www.belgiantrain.be",
+        "link": null,
         "go4cycling": false
       },
       {
@@ -129,7 +129,7 @@
         "icon": "🚍",
         "description": "Afhentning ved hotellet – Go4Cycling VIP-bus",
         "details": "Go4Cycling-bussen henter os direkte ved hotellet. Vær klar i god tid og hav bookingbekræftelse klar. Det præcise afhentningstidspunkt bekræftes op til turen.",
-        "link": "https://www.go4cycling.com/product/paris-roubaix-vip-bus-with-live-tv",
+        "link": null,
         "go4cycling": true
       },
       {
@@ -161,7 +161,7 @@
         "icon": "🏁",
         "description": "Bussen kører — løbet starter kl. 10:15 og vi følger det fra centrale positioner langs ruten",
         "details": "Pelotonen er neutraliseret gennem Compiègne by, før løbet går live. Bussen kører til den første strategiske position. Go4Cycling planlægger flere stop langs ruten, herunder ikoniske brostensafsnit — præcise positioner bekræftes tæt på løbsdagen.",
-        "link": "https://www.paris-roubaix.fr",
+        "link": null,
         "go4cycling": true
       },
       {
@@ -185,7 +185,7 @@
         "icon": "🏟️",
         "description": "Ankomst til Roubaix Velodromen — målstregen!",
         "details": "Vélodrome André Pétrieux stammer tilbage fra 1936 og rummer ~8.000 tilskuere. Heriblandt os, VIP-adgang er inkluderet. Vinderens bad i de berømte fælles brusere er en tradition.",
-        "link": "https://www.paris-roubaix.fr",
+        "link": null,
         "go4cycling": true
       },
       {
@@ -246,14 +246,14 @@
         "icon": "🛫",
         "description": "Ankomst Bruxelles Lufthavn (BRU) · indtjek til hjemrejse",
         "details": "God tid inden afgang kl. 15:45. Indtjek lukker 45 min før afgang. Sikkerhedstjek tager typisk 20–30 min. Vi flyver med Brussels Airlines — find deres indtjekningsskranke i afgangshallen. Bookingreference: <strong>98EIXC</strong>.",
-        "link": "https://www.brusselsairport.be",
+        "link": null,
         "go4cycling": false
       },
       {
         "time": "15:45",
         "icon": "✈️",
-        "description": "Afgang Bruxelles (BRU) → København (CPH)",
-        "details": "Bekræftet afgang kl. 15:45 fra Bruxelles (BRU) med Brussels Airlines. ~1t35min nonstop, lander i København (CPH) kl. 17:20. Billetpris: DKK 2.098 pr. person. Bookingreference: <strong>98EIXC</strong>. Samme bagageregler som på udturen: 1× håndbagage (op til 8 kg) + 1× personlig genstand.",
+        "description": "Afgang Bruxelles (BRU) → København (CPH) <span class=\"confirmed-badge\">CONFIRMED</span>",
+        "details": "Bekræftet afgang kl. 15:45 fra Bruxelles (BRU) med Brussels Airlines. ~1t35min nonstop, lander i København (CPH) kl. 17:20. Billetpris: DKK 2.098 pr. person. Bookingreference: <strong>98EIXC</strong>.<br><br><strong>Bagage inkluderet pr. person:</strong><br>• 1× håndbagage (op til 8 kg)<br>• 1× personlig genstand (fx taske, kamerataske eller laptop)",
         "link": null,
         "go4cycling": false
       },
