@@ -29,8 +29,8 @@
       {
         "time": "15:30",
         "icon": "🏨",
-        "description": "Check-in på Hotel Damier <span class=\"tbd-badge\">TBD</span>",
-        "details": "Foreslået hotel: Hotel Damier (centralt på Grote Markt i Kortrijk). NB: ~45 min gang til det forventede VIP-bus-mødested ved Decathlon, Kortrijk. Standard check-in er kl. 15:00, så værelserne bør være klar ved ankomst. Booking skal bekræftes.",
+        "description": "Check-in på Hotel Darmier <span class=\"confirmed-badge\">CONFIRMED</span>",
+        "details": "Hotel Darmier, Grote Markt 41, 8500 Kortrijk — centralt på Grote Markt i Kortrijk. Check-in er kl. 15:00, så værelserne er klar ved ankomst. Morgenmad er inkluderet, og der følger en rabatkupon på €51 til drikkevarer i hotellets bar. 🍻",
         "link": null,
         "go4cycling": false
       },
@@ -213,7 +213,7 @@
         "time": "09:00",
         "icon": "☕",
         "description": "Morgenmad på hotellet",
-        "details": "Rolig morgen — hjemflyet går først kl. 15:45, så der er god tid. Standard udtjekning er kl. 12:00, men bekræft med hotellet. Bagageopbevaring er som regel mulig, hvis det er nødvendigt.",
+        "details": "Rolig morgen — hjemflyet går først kl. 15:45, så der er god tid. Udtjekning er kl. 12:00. Bagageopbevaring er som regel mulig, hvis det er nødvendigt.",
         "link": null,
         "go4cycling": false
       },
