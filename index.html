@@ -620,7 +620,7 @@
 <body>
 
 <div class="hero">
-    <span class="updated-stamp">Opdateret 22. juli kl. 08:20</span>
+    <span class="updated-stamp">Opdateret 22. juli kl. 08:30</span>
     <div class="hero-tag">9.–12. april 2027</div>
     <h1>Paris<em>-</em>Roubaix</h1>
     <p class="hero-sub">🇧🇪🍺 FORÅRSTUR 🍺🇫🇷</p>
@@ -895,7 +895,7 @@
     <div class="cost-card">
         <div class="cost-row">
             <span class="cost-icon">✈️</span>
-            <span class="cost-label">Fly CPH ↔ BRU (tur/retur)<small>bekræftet: 11:55–13:25 ud · 15:45–17:20 hjem</small></span>
+            <span class="cost-label">Fly CPH ↔ BRU (tur/retur)<small>Brussels Airlines · 11:55–13:25 ud · 15:45–17:20 hjem · ref. 98EIXC</small></span>
             <span class="cost-amount">DKK 2 098</span>
         </div>
         <div class="cost-row">
@@ -932,7 +932,7 @@
         <h2>Hvem er med?</h2>
         <div class="sh-line"></div>
     </div>
-    <p class="section-subtitle">Klik på din status. Den gemmes og deles med resten af holdet.</p>
+    <p class="section-subtitle">Afstemningen er lukket. Nedenfor vises den seneste status til orientering.</p>
 
     <div class="poll-card">
         <div class="poll-status">
@@ -1029,10 +1029,11 @@
     // Auto-update the "Opdateret …" stamp from GitHub's latest commit.
     // The hard-coded text in the HTML is only a fallback (if the API is
     // unreachable or rate-limited).
-    // ── POLL ───────────────────────────────────────────────────────────────
-    // Shared poll state lives in a single public jsonbin.io bin. Reads are
-    // anonymous; writes require POLL_KEY (an "Update Bin"-only access key,
-    // so the worst a leak allows is overwriting the votes).
+    // ── POLL (CLOSED / READ-ONLY) ───────────────────────────────────────────
+    // The poll is kept for reference only. It still reads the last recorded
+    // votes from the public jsonbin.io bin (anonymous GET) and displays them,
+    // but the write path and the "Update Bin" access key have been removed,
+    // so nothing on the page can change the stored result any more.
     const POLL_NAMES = ['Kenni', 'Trolito', 'Gert', 'Eriksen', 'Miguel', 'Volley', 'Crassus', 'Zuggi'];
     const POLL_STATES = [
         { key: 'in',        emoji: '✅', label: 'Er muss!' },
@@ -1040,13 +1041,11 @@
         { key: 'out',       emoji: '❌', label: 'I\'m gone, I\'m dead!' },
     ];
     const POLL_BIN_ID = '69fc8debc0954111d8ed8ae4';
-    const POLL_KEY = '$2a$10$WRrzyEfXDDkiu.3rmesrC.M2PXZtv9uRdCva3kKO.CCJelxGAFhiS';
     const POLL_BIN_URL = `https://api.jsonbin.io/v3/b/${POLL_BIN_ID}`;
 
     const pollGrid = document.getElementById('pollGrid');
     const pollStatusEls = document.querySelectorAll('.poll-status-text');
     let pollState = Object.fromEntries(POLL_NAMES.map(n => [n, 'undecided']));
-    let pollWriteInFlight = false;
 
     function pollSetStatus(text, isError = false) {
         pollStatusEls.forEach(el => {
@@ -1078,25 +1077,8 @@
             currentEl.textContent = pollLabelFor(current);
             card.appendChild(currentEl);
 
-            const row = document.createElement('div');
-            row.className = 'poll-btn-row';
-            POLL_STATES.forEach(s => {
-                const btn = document.createElement('button');
-                btn.className = 'poll-btn' + (s.key === current ? ' is-active' : '');
-                btn.dataset.state = s.key;
-                btn.title = `${name}: ${s.label}`;
-                const emoji = document.createElement('span');
-                emoji.className = 'poll-btn-emoji';
-                emoji.setAttribute('aria-hidden', 'true');
-                emoji.textContent = s.emoji;
-                const label = document.createElement('span');
-                label.className = 'poll-btn-label';
-                label.textContent = s.label;
-                btn.append(emoji, label);
-                btn.addEventListener('click', () => pollSetVote(name, s.key));
-                row.appendChild(btn);
-            });
-            card.appendChild(row);
+            // Poll is closed: no vote buttons are rendered — the card shows the
+            // last recorded status only, for reference.
             pollGrid.appendChild(card);
         });
     }
@@ -1122,41 +1104,7 @@
         return pollNormalize(await res.json());
     }
 
-    async function pollPut(votes) {
-        const res = await fetch(POLL_BIN_URL, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'X-Access-Key': POLL_KEY,
-            },
-            body: JSON.stringify({ version: 1, votes }),
-        });
-        if (!res.ok) throw new Error('Kunne ikke gemme afstemning (' + res.status + ')');
-    }
-
-    async function pollSetVote(name, key) {
-        if (pollWriteInFlight) return;
-        const previous = pollState[name];
-        if (previous === key) return;
-        pollWriteInFlight = true;
-        pollState = { ...pollState, [name]: key };
-        pollRenderGrid();
-        pollSetStatus('Gemmer…');
-        try {
-            await pollPut(pollState);
-            pollSetStatus('Gemt ✓ — opdateres automatisk');
-        } catch (err) {
-            pollState = { ...pollState, [name]: previous };
-            pollRenderGrid();
-            pollSetStatus(err.message || 'Kunne ikke gemme', true);
-        } finally {
-            pollWriteInFlight = false;
-        }
-    }
-
     async function pollRefresh() {
-        if (pollWriteInFlight) return;
         try {
             const next = await pollFetch();
             const changed = POLL_NAMES.some(n => next[n] !== pollState[n]);
@@ -1172,7 +1120,7 @@
         try {
             pollState = await pollFetch();
             pollRenderGrid();
-            pollSetStatus('Klik på en knap for at sætte din status');
+            pollSetStatus('Afstemningen er lukket — viser den seneste status');
         } catch (err) {
             pollSetStatus(err.message || 'Kunne ikke indlæse afstemning', true);
             return;

@@ -6,7 +6,7 @@
         "time": "11:55",
         "icon": "✈️",
         "description": "Afgang København (CPH) → Bruxelles (BRU)",
-        "details": "Bekræftet afgang kl. 11:55 fra København (CPH). ~1t30min nonstop, lander i Bruxelles (BRU) kl. 13:25. Billetpris: DKK 2.098 pr. person.",
+        "details": "Bekræftet afgang kl. 11:55 fra København (CPH) med Brussels Airlines. ~1t30min nonstop, lander i Bruxelles (BRU) kl. 13:25. Billetpris: DKK 2.098 pr. person. Bookingreference: <strong>98EIXC</strong>.<br><br><strong>Bagage inkluderet pr. person:</strong><br>• 1× håndbagage (op til 8 kg)<br>• 1× personlig genstand (fx taske, kamerataske eller laptop)",
         "link": null,
         "go4cycling": false
       },
@@ -127,8 +127,8 @@
       {
         "time": "06:00",
         "icon": "🚍",
-        "description": "Mødested i Kortrijk – Go4Cycling VIP-bus",
-        "details": "Det præcise afhentningssted kommunikeres op til turen. Hav bookingbekræftelse klar.",
+        "description": "Afhentning ved hotellet – Go4Cycling VIP-bus",
+        "details": "Go4Cycling-bussen henter os direkte ved hotellet. Vær klar i god tid og hav bookingbekræftelse klar. Det præcise afhentningstidspunkt bekræftes op til turen.",
         "link": "https://www.go4cycling.com/product/paris-roubaix-vip-bus-with-live-tv",
         "go4cycling": true
       },
@@ -245,7 +245,7 @@
         "time": "13:45",
         "icon": "🛫",
         "description": "Ankomst Bruxelles Lufthavn (BRU) · indtjek til hjemrejse",
-        "details": "God tid inden afgang kl. 15:45. Indtjek lukker 45 min før afgang. Sikkerhedstjek tager typisk 20–30 min. SAS' skranke er i Terminal 1 (Schengen-afgange).",
+        "details": "God tid inden afgang kl. 15:45. Indtjek lukker 45 min før afgang. Sikkerhedstjek tager typisk 20–30 min. Vi flyver med Brussels Airlines — find deres indtjekningsskranke i afgangshallen. Bookingreference: <strong>98EIXC</strong>.",
         "link": "https://www.brusselsairport.be",
         "go4cycling": false
       },
@@ -253,7 +253,7 @@
         "time": "15:45",
         "icon": "✈️",
         "description": "Afgang Bruxelles (BRU) → København (CPH)",
-        "details": "Bekræftet afgang kl. 15:45 fra Bruxelles (BRU). ~1t35min nonstop, lander i København (CPH) kl. 17:20. Billetpris: DKK 2.098 pr. person.",
+        "details": "Bekræftet afgang kl. 15:45 fra Bruxelles (BRU) med Brussels Airlines. ~1t35min nonstop, lander i København (CPH) kl. 17:20. Billetpris: DKK 2.098 pr. person. Bookingreference: <strong>98EIXC</strong>. Samme bagageregler som på udturen: 1× håndbagage (op til 8 kg) + 1× personlig genstand.",
         "link": null,
         "go4cycling": false
       },
