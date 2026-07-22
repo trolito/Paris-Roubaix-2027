@@ -422,6 +422,24 @@
             line-height: 1.55;
             margin-bottom: 8px;
         }
+        .act-details ul {
+            list-style: none;
+            margin: 0 0 8px;
+            padding: 0;
+        }
+        .act-details ul li {
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+            padding-left: 16px;
+            position: relative;
+        }
+        .act-details ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
         .act-link {
             display: inline-flex;
             align-items: center;
@@ -548,6 +566,25 @@
             font-size: 0.78rem;
             font-weight: 400;
             margin-top: 2px;
+        }
+        .cost-label ul.cost-bullets {
+            list-style: none;
+            margin: 6px 0 2px;
+            padding: 0;
+        }
+        .cost-label ul.cost-bullets li {
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            font-weight: 400;
+            line-height: 1.5;
+            padding-left: 14px;
+            position: relative;
+        }
+        .cost-label ul.cost-bullets li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
         }
         .cost-amount {
             color: var(--gold);
@@ -696,7 +733,7 @@
 <body>
 
 <div class="hero">
-    <span class="updated-stamp">Opdateret 22. juli kl. 13:44</span>
+    <span class="updated-stamp">Opdateret 22. juli kl. 13:55</span>
     <div class="hero-tag">9.–12. april 2027</div>
     <h1>Paris<em>-</em>Roubaix</h1>
     <p class="hero-sub">🇧🇪🍺 FORÅRSTUR 🍺🇫🇷</p>
@@ -755,15 +792,15 @@
 
     <!-- HOTEL CARD -->
     <div class="hotel-card">
-        <img class="hotel-photo" alt="Hotel Darmier set fra Grote Markt i Kortrijk"
+        <img class="hotel-photo" alt="Hotel Damier set fra Grote Markt i Kortrijk"
              src="https://commons.wikimedia.org/wiki/Special:FilePath/HotelDamier_GroteMarkt.jpg"
              onerror="var c=this.closest('.hotel-card'); var cr=c.querySelector('.hotel-credit'); if(cr) cr.style.display='none'; this.remove();">
         <div class="hotel-body">
             <div class="hotel-info">
-                <div class="hotel-name">Hotel Darmier</div>
+                <div class="hotel-name">Hotel Damier</div>
                 <div class="hotel-address">Grote Markt 41, 8500 Kortrijk</div>
             </div>
-            <a class="hotel-link" href="https://www.hoteldamier.be/en/" target="_blank" rel="noopener noreferrer">🏨 Besøg hotellets hjemmeside</a>
+            <a class="hotel-link" href="https://www.hoteldamier.be/en/" target="_blank" rel="noopener noreferrer">🏨 Besøg hoteldamier.be</a>
         </div>
         <div class="hotel-credit">Foto: <a href="https://commons.wikimedia.org/wiki/File:HotelDamier_GroteMarkt.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></div>
     </div>
@@ -793,7 +830,7 @@
         </div>
         <div class="cost-row">
             <span class="cost-icon">🏨</span>
-            <span class="cost-label">Hotel — 3 overnatninger på Hotel Darmier <span class="confirmed-badge">CONFIRMED</span><small>pr. person, delt dobbeltværelse · morgenmad inkluderet · rabatkupon på €51 til drikkevarer i hotellets bar (€17 pr. værelse pr. booking for Hotels.com VIP Silver-medlemmer) 🍻</small></span>
+            <span class="cost-label">Hotel — 3 overnatninger på Hotel Damier <span class="confirmed-badge">CONFIRMED</span><ul class="cost-bullets"><li>2 × 2-personers værelse</li><li>1 × 3-personers værelse</li><li>Morgenmad inkluderet</li><li>Rabatkupon på €51 til drikkevarer i baren (€17 pr. værelse pr. booking for Hotels.com VIP Silver-medlemmer) 🍻</li></ul></span>
             <span class="cost-amount">DKK 2 442</span>
         </div>
         <div class="cost-row g4c">
@@ -816,7 +853,7 @@
             <span class="cost-label">Cirkapris pr. person</span>
             <span class="cost-amount">DKK 7 230</span>
         </div>
-        <p class="cost-note">Alle beløb i DKK pr. person og kun vejledende og estimeret efter bedste evne. Flyprisen (DKK 2.098) er bekræftet. Go4Cycling VIP-buspris er fra go4cycling.com (€240 ≈ DKK 1 790). Hotelprisen er bekræftet og forudsætter et delt dobbeltværelse på Hotel Darmier (morgenmad inkluderet). Øvrig mad og drikke er ikke inkluderet.</p>
+        <p class="cost-note">Alle beløb i DKK pr. person og kun vejledende og estimeret efter bedste evne. Flyprisen (DKK 2.098) er bekræftet. Go4Cycling VIP-buspris er fra go4cycling.com (€240 ≈ DKK 1 790). Hotelprisen er bekræftet og dækker 2 × 2-personers og 1 × 3-personers værelse på Hotel Damier (morgenmad inkluderet). Øvrig mad og drikke er ikke inkluderet.</p>
     </div>
 
     <!-- POLL SECTION -->
