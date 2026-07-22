@@ -19,23 +19,22 @@ unauthenticated). When you change `index.html` or `schedule.json`,
 refresh that fallback text too with
 `TZ='Europe/Copenhagen' date '+%-d %H:%M'` plus the Danish month name.
 
-## Poll ("Hvem er med?")
+## Poll ("Hvem er med?") — CLOSED / read-only
 
-The bottom of the page hosts a shared poll where each of the 8 named
-guys can pick `in` / `undecided` / `out`. The state is stored as a
-single record in a **public jsonbin.io bin** — the bin ID and an
-"Update Bin"-only access key are hard-coded as `POLL_BIN_ID` and
-`POLL_KEY` near the bottom of the inline `<script>` in `index.html`.
-Reads are anonymous (public bin, `GET /v3/b/<id>/latest` with
-`X-Bin-Meta: false`); writes send `X-Access-Key: <POLL_KEY>` on
-`PUT /v3/b/<id>`. The key is intentionally write-only-on-this-bin,
-so a leak just lets someone overwrite the votes — `git restore` from
-history fixes that.
+The bottom of the page hosts a poll where each of the 8 named guys
+could pick `in` / `undecided` / `out`. **It is now closed / read-only,
+kept for reference only.** The page still reads the last recorded
+state from a **public jsonbin.io bin** (anonymous `GET /v3/b/<id>/latest`
+with `X-Bin-Meta: false`) and displays each guy's final status, but the
+vote buttons, the write path (`PUT /v3/b/<id>`), and the "Update Bin"
+access key (`POLL_KEY`) have all been removed — nothing on the page can
+change the stored result any more. To reactivate, restore the write
+path and a `POLL_KEY` from git history.
 
 Earlier versions used jsonblob.com with the bin ID in the URL hash;
 that was abandoned because jsonblob host-allowlists requests and
 returned `403 host_not_allowed` to `trolito.github.io`.
 
 Names, states, and bin config live as `POLL_NAMES`, `POLL_STATES`,
-`POLL_BIN_ID`, `POLL_KEY`, and `POLL_BIN_URL` near the bottom of the
-inline `<script>` in `index.html`.
+`POLL_BIN_ID`, and `POLL_BIN_URL` near the bottom of the inline
+`<script>` in `index.html`.
