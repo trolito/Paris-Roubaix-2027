@@ -46,8 +46,8 @@
         "time": "18:30",
         "icon": "🍽️",
         "description": "Aftensmad og drinks i Kortrijk",
-        "details": "<strong>Restaurant: Social Club</strong><br>Budastraat 10, Kortrijk<br><br>Spansk/mexicansk restaurant med tapas og tacos samt en kreativ cocktailmenu. Populært sted, der kræver reservation.",
-        "link": "https://socialclubkortrijk.com/",
+        "details": "<strong>Restaurant: Social Club</strong><br>Budastraat 10, Kortrijk<br><br>Spansk/mexicansk restaurant med tapas og tacos samt en kreativ cocktailmenu. Populært sted, der kræver reservation.<br><a class=\"desc-link\" href=\"https://socialclubkortrijk.com/\" target=\"_blank\" rel=\"noopener noreferrer\">🍽️ Besøg socialclubkortrijk.com</a>",
+        "link": null,
         "go4cycling": false
       }
     ]
@@ -67,7 +67,7 @@
         "time": "09:30",
         "icon": "🏛️",
         "description": "Sightseeing i Gent: Gravensteen, Graslei, Korenlei",
-        "details": "Gravensteen (Grevernes Borg) går tilbage til 1180 og giver panoramaudsigt. Graslei og Korenlei er de ikoniske middelalderlige lavhus-kajer langs floden Leie — Gents hjerte.",
+        "details": "Tre klassikere inden for gåafstand af hinanden:<ul><li><strong>Gravensteen</strong> — Grevernes Borg fra 1180; gå på murene for panoramaudsigt over byen.</li><li><strong>Graslei</strong> — den ikoniske middelalderlige kaj med lavhuse langs floden Leie, Gents hjerte.</li><li><strong>Korenlei</strong> — kajen på den modsatte bred med smukke gilde- og handelshuse spejlet i vandet.</li></ul>",
         "link": null,
         "go4cycling": false
       },
@@ -75,15 +75,15 @@
         "time": "12:30",
         "icon": "🍽️",
         "description": "Frokost på Artevelde",
-        "details": "Artevelde — bybryggeri og restaurant på Botermarkt 5, drevet af familiebryggeriet Huyghe. Hverdags-frokostmenu til €25 (suppe, valg mellem tre hovedretter inkl. vegetar, kaffe). Egne øl brygget på stedet, herunder Artevelde Leute (sølvmedalje ved Brussels Beer Challenge).",
+        "details": "<strong>Artevelde</strong> — bybryggeri og restaurant på Botermarkt 5, drevet af familiebryggeriet Huyghe. Hverdags-frokostmenu til €25 (suppe, valg mellem tre hovedretter inkl. vegetar, kaffe). Egne øl brygget på stedet, herunder Artevelde Leute (sølvmedalje ved Brussels Beer Challenge).<br><a class=\"desc-link\" href=\"https://artevelde.be/en/\" target=\"_blank\" rel=\"noopener noreferrer\">🍺 Besøg artevelde.be</a>",
         "link": null,
         "go4cycling": false
       },
       {
         "time": "14:00",
         "icon": "🍺",
-        "description": "Øl i Gent — vælg en bar (eller tag på bryggerirundtur)",
-        "details": "Tre muligheder for en eftermiddagsrunde:<br><br><strong>Het Waterhuis aan de Bierkant</strong> — kanalside-ølbar på Groentenmarkt 9 med 165 øl, inkl. tre husbryg (Gandavum, Klokke Roeland, Mammelokker).<br><br><strong>Dulle Griet</strong> — gammeldags flamsk værtshus på Vrijdagmarkt 50 med 500+ øl; aflever en sko som pant for det høje Kwak-glas.<br><br><strong>Bryggerirundtur</strong> — Visit Gents bryggeriguide dækker rundvisninger hos Gruut, Dok Brewing Company (Hal 16), Stropken og flere.",
+        "description": "Øl-sightseeing",
+        "details": "Forslag til lokale vandhuller:<ul><li><strong>Het Waterhuis aan de Bierkant</strong> — kanalside-ølbar på Groentenmarkt 9 med 165 øl, inkl. tre husbryg (Gandavum, Klokke Roeland, Mammelokker).<br><a class=\"desc-link\" href=\"https://waterhuisaandebierkant.be/\" target=\"_blank\" rel=\"noopener noreferrer\">🍺 Besøg waterhuisaandebierkant.be</a></li><li><strong>Dulle Griet</strong> — gammeldags flamsk værtshus på Vrijdagmarkt 50 med 500+ øl; aflever en sko som pant for det høje Kwak-glas.<br><a class=\"desc-link\" href=\"https://www.dullegriet.be/en/\" target=\"_blank\" rel=\"noopener noreferrer\">🍺 Besøg dullegriet.be</a></li><li><strong>Gruut City Brewery</strong> — bybryggeri hvor øllene krydres med urteblandingen 'gruut' i stedet for humle; taproom og rundvisninger.<br><a class=\"desc-link\" href=\"https://www.gruut.be/en/\" target=\"_blank\" rel=\"noopener noreferrer\">🍺 Besøg gruut.be</a></li></ul>",
         "link": null,
         "go4cycling": false
       },
@@ -98,8 +98,8 @@
       {
         "time": "19:00",
         "icon": "🍷",
-        "description": "Aftensmad og drinks i Kortrijk",
-        "details": "Afslappet aften forud for den tidlige løbsdagsstart. Området ved Broelkaai langs floden Leie har flere barer og restauranter med udendørs terrasser.",
+        "description": "Aftensmad i Kortrijk",
+        "details": "Afslappet aften forud for den tidlige løbsdagsstart.",
         "link": null,
         "go4cycling": false
       },
