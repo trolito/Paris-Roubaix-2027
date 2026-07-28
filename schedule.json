@@ -58,8 +58,8 @@
       {
         "time": "09:00",
         "icon": "🚆",
-        "description": "Tog eller bus fra Kortrijk til Gent (~30 minutter)",
-        "details": "NMBS Intercity-tog kører hver 30 min mellem Kortrijk og Gent-Sint-Pieters. En returbillet koster ~DKK 75–110 pr. person. Ingen pladsreservation nødvendig.",
+        "description": "Transport til Gent",
+        "details": "<ul><li><strong>Tog (NMBS Intercity):</strong> afgår hver 30 min mellem Kortrijk og Gent-Sint-Pieters, ~30 min undervejs. Returbillet ~DKK 75–110 pr. person, ingen pladsreservation.</li><li><strong>Bemærk gåturen:</strong> Gent-Sint-Pieters ligger ~30 min gang fra centrum (Graslei/Korenlei). Alternativt kører sporvogn 1 fra stationen ind til centrum på ~10–15 min.</li><li><strong>Taxa/privat transfer:</strong> kører direkte fra Kortrijk ind til den gamle bydel på ~45 min — uden skift og uden gåturen fra stationen. For en gruppe på 8 kan det være både hurtigere og til at betale pr. person, og ekstra rart på vej hjem om aftenen.</li></ul>",
         "link": null,
         "go4cycling": false
       },
