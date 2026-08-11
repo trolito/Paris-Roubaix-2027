@@ -120,15 +120,15 @@
         "time": "05:00",
         "icon": "☕",
         "description": "Tidligt op!",
-        "details": "Vækning kl. 05:00. Bemærk: mødestedet er i år <strong>ikke</strong> hotellet, men Parking Decathlon i Kortrijk kl. 06:00 — planlæg transporten derhen i god tid. Kaffe, te og bagværk serveres ombord på minibussen.",
+        "details": "Vækning kl. 05:00. Minibussen henter os direkte ved hotellet kl. 06:00, så vær klar i god tid. Kaffe, te og bagværk serveres ombord.",
         "link": null,
         "go4cycling": false
       },
       {
         "time": "06:00",
-        "icon": "📍",
-        "description": "Mødested: Parking Decathlon, Kortrijk – Go4Cycling minibus",
-        "details": "Vi mødes med de øvrige cykelentusiaster ved <strong>Parking Decathlon</strong> i Kortrijk — det er turens afhentningssted (altså ikke hotellet). Vær klar i god tid og hav bookingbekræftelsen klar.",
+        "icon": "🚍",
+        "description": "Afhentning ved hotellet – Go4Cycling minibus",
+        "details": "Go4Cycling-minibussen henter os direkte ved Hotel Damier på Grote Markt. Vær klar i god tid og hav bookingbekræftelsen klar.",
         "link": null,
         "go4cycling": true
       },
