@@ -19,6 +19,15 @@ unauthenticated). When you change `index.html` or `schedule.json`,
 refresh that fallback text too with
 `TZ='Europe/Copenhagen' date '+%-d %H:%M'` plus the Danish month name.
 
+## Countdown
+
+The hero shows a live countdown to departure from Copenhagen — Friday
+9 April 2027 at 11:55 Copenhagen time, hard-coded as `COUNTDOWN_TARGET`
+near the bottom of the inline `<script>` in `index.html`. It ticks once
+a second in days/hours/minutes/seconds and, once the time has passed,
+hides the boxes and shows "Turen er i gang!" instead. If the departure
+time in `schedule.json` changes, change `COUNTDOWN_TARGET` to match.
+
 ## Poll ("Hvem er med?") — CLOSED / read-only
 
 The bottom of the page hosts a poll where each of the 8 named guys

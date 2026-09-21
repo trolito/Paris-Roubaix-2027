@@ -152,6 +152,69 @@
             opacity: 0.75;
         }
 
+        /* ── COUNTDOWN ── */
+        .countdown {
+            position: relative;
+            margin-top: 26px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .countdown-label {
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+        .countdown-boxes {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .cd-box {
+            min-width: 68px;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 14px;
+            padding: 10px 12px 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+        .cd-box .cd-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.1rem;
+            line-height: 1;
+            letter-spacing: 1px;
+            color: #fff;
+            font-variant-numeric: tabular-nums;
+        }
+        .cd-box.cd-days .cd-value {
+            color: var(--red);
+        }
+        .cd-box .cd-unit {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+        .countdown.is-done .countdown-boxes {
+            display: none;
+        }
+        .countdown.is-done .countdown-label {
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+        @media (max-width: 480px) {
+            .cd-box { min-width: 58px; padding: 8px 9px 7px; }
+            .cd-box .cd-value { font-size: 1.7rem; }
+        }
+
         /* ── TBD BADGE ── */
         .tbd-badge {
             display: inline-block;
@@ -746,7 +809,7 @@
 <body>
 
 <div class="hero">
-    <span class="updated-stamp">Opdateret 11. august kl. 14:29</span>
+    <span class="updated-stamp">Opdateret 21. september kl. 13:27</span>
     <div class="hero-tag">9.–12. april 2027</div>
     <h1>Paris<em>-</em>Roubaix</h1>
     <p class="hero-sub">🇧🇪🍺 FORÅRSTUR 🍺🇫🇷</p>
@@ -765,6 +828,15 @@
                 </ul>
             </span>
         </span>
+    </div>
+    <div class="countdown" id="countdown">
+        <span class="countdown-label" id="countdownLabel">Til afgang fra København</span>
+        <div class="countdown-boxes">
+            <span class="cd-box cd-days"><span class="cd-value" id="cdDays">–</span><span class="cd-unit">Dage</span></span>
+            <span class="cd-box"><span class="cd-value" id="cdHours">–</span><span class="cd-unit">Timer</span></span>
+            <span class="cd-box"><span class="cd-value" id="cdMinutes">–</span><span class="cd-unit">Min.</span></span>
+            <span class="cd-box"><span class="cd-value" id="cdSeconds">–</span><span class="cd-unit">Sek.</span></span>
+        </div>
     </div>
 </div>
 
@@ -1051,6 +1123,35 @@
         window.addEventListener('focus', pollRefresh);
     }
     pollInit();
+
+    // ── COUNTDOWN til afgang fra København: fredag 9. april 2027 kl. 11:55 (CEST) ──
+    const COUNTDOWN_TARGET = new Date('2027-04-09T11:55:00+02:00');
+
+    function countdownTick() {
+        const box = document.getElementById('countdown');
+        if (!box) return;
+        const left = COUNTDOWN_TARGET.getTime() - Date.now();
+
+        if (left <= 0) {
+            box.classList.add('is-done');
+            document.getElementById('countdownLabel').textContent = 'Turen er i gang! 🚴';
+            return true;
+        }
+
+        const totalSeconds = Math.floor(left / 1000);
+        const set = (id, v) => { document.getElementById(id).textContent = String(v).padStart(2, '0'); };
+        set('cdDays', Math.floor(totalSeconds / 86400));
+        set('cdHours', Math.floor(totalSeconds / 3600) % 24);
+        set('cdMinutes', Math.floor(totalSeconds / 60) % 60);
+        set('cdSeconds', totalSeconds % 60);
+        return false;
+    }
+
+    if (!countdownTick()) {
+        const countdownTimer = setInterval(() => {
+            if (countdownTick()) clearInterval(countdownTimer);
+        }, 1000);
+    }
 
     fetch('https://api.github.com/repos/trolito/Paris-Roubaix-2027/commits?per_page=1')
         .then(r => r.ok ? r.json() : Promise.reject())
